@@ -1,0 +1,510 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+
+@font-face {
+    font-family: appFont;
+    src: url(../fonts/S-CoreDream-4Regular.woff) format('woff');
+    font-weight: 300;
+    /* Regular */
+}
+
+@font-face {
+    font-family: appFont;
+    src: url(../fonts/S-CoreDream-5Medium.woff) format('woff');
+    font-weight: 600;
+    /* Medium */
+}
+
+@font-face {
+    font-family: appFont;
+    src: url(../fonts/S-CoreDream-6Bold.woff) format('woff');
+    font-weight: 900;
+    /* Bold */
+}
+
+
+* {
+    font-family: 'appFont', 'Noto Sans KR', sans-serif;
+}
+
+body {
+    background: #0f1012;
+    overflow-x: hidden;
+ 
+}
+
+.custom-scroll::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+/* Track */
+.custom-scroll::-webkit-scrollbar-track {
+    background: #131416;
+}
+
+/* Handle */
+.custom-scroll::-webkit-scrollbar-thumb {
+    background: #ed518b;
+    border-radius: 10px;
+}
+
+
+input:focus {
+    outline: none;
+}
+
+.truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.container {
+    max-width: 1260px!important;
+}
+
+#odometer {
+    color: #dac179;
+    font-size: 40px;
+    font-weight: 900;
+    /* margin-top: 18px; */
+    padding: 10px 0px;
+    font-family: 'appFont', 'Noto Sans KR', sans-serif;
+}
+
+.currency-sign {
+    background: linear-gradient(#f3a4c1, #eb5e92 50%, #ec3075 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 40px;
+    font-weight: 900;
+    top: 6px;
+    position: relative;
+}
+
+.odometer {
+    vertical-align: top !important;
+    background: linear-gradient(#f3a4c1, #eb5e92 50%, #ec3075 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent
+}
+
+.odometer .odometer-value {
+    background: linear-gradient(#f3a4c1, #eb5e92 50%, #ec3075 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent
+}
+
+
+.dialog-inner-box .button-main {
+    height: 30px;
+        line-height: 20px;
+        padding: 0 15px;
+        font-size: 12px;
+        border-radius: 30px;
+        background: #ed518b;
+        color: #fff;
+        font-weight: 600;
+}
+
+
+.button-main {
+    height: 40px;
+    line-height: 38px;
+    padding: 0 26px;
+    font-size: 15px;
+    border-radius: 30px;
+    background: #ed518b;
+    color: #fff;
+    font-weight: 600;
+}
+
+.button-main.btn-invert {
+    background: transparent;
+    border: 1px solid #ed558f;
+
+}
+
+.app-menu {
+    padding: 10px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    position: relative;
+}
+
+.app-menu:hover {
+    background: #ffffff25;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.app-menu.active {
+    background: #ffffff25;
+    border-radius: 4px;
+}
+
+.app-menu.active:before {
+    content: "";
+    transform: scaleX(1);
+    background: #ed518b;
+    background: linear-gradient(90deg, transparent 0, #ef679a 50%, transparent);
+}
+
+.app-menu:hover:before {
+    content: "";
+    transform: scaleX(1);
+    background: #ed518b;
+    background: linear-gradient(90deg, transparent 0, #ef679a 50%, transparent);
+}
+
+
+.app-menu:before {
+    left: 0;
+    content: "";
+    position: absolute;
+    bottom: -23px;
+    display: block;
+    width: 100%;
+    height: 2px;
+    transition: .3s;
+    transform: scaleX(0);
+}
+
+
+.scroll_row {
+    display: flex;
+    align-items: center;
+    height: 70px;
+}
+
+.scroll_row .scrolling_box {
+    position: relative;
+    overflow: hidden;
+    height: 50px;
+    padding: 0 0 0 50px;
+    background: #16181b;
+    width: 100%;
+}
+
+.scroll_row .scrolling_box .svg_scroll {
+    width: 25px;
+    height: 22px;
+    margin: 13px;
+}
+
+
+
+.scroll_row .scrolling_box .scr_svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    background: #16181b;
+    z-index: 1;
+}
+
+
+.scroll_row .scrolling_box .scr_box {
+    display: inline-block;
+    line-height: 50px;
+    padding-left: 100%;
+    white-space: nowrap;
+    -webkit-animation: scrolling linear infinite;
+    animation: scrolling linear infinite;
+}
+
+.scroll_row .scrolling_box .scr_box span {
+    display: inline-block;
+    margin: 0 40px 0 0;
+    color: #ef679a;
+    font-size: 18px;
+}
+
+
+@-webkit-keyframes scrolling {
+    0% {
+        transform: translate(0)
+    }
+
+    99%,
+    to {
+        transform: translate(-100%)
+    }
+}
+
+@keyframes scrolling {
+    0% {
+        transform: translate(0)
+    }
+
+    99%,
+    to {
+        transform: translate(-100%)
+    }
+}
+
+#main-body {
+    padding: 30px 0 30px 0;
+    min-height: 800px;
+    background: url(../images/bg/top.jpg) no-repeat top, url(../images/bg/bottom.jpg) no-repeat bottom;
+    box-shadow: inset 0 6px 20px 2px rgba(0, 0, 0, .7);
+}
+
+
+
+.banner-model {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.banner-model .banner-img-girl {
+    margin: auto;
+    height: 230px;
+    position: absolute;
+    right: 60px;
+    top: 20px;
+}
+
+.banner-model .banner-img-coins {
+    position: absolute;
+    top: 18px;
+    right: 70px;
+    width: auto;
+    height: 175px;
+    -webkit-animation: bounce 3s linear infinite;
+    animation: bounce 3s linear infinite
+}
+
+.banner-model .banner-img-shapes {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: auto;
+    height: 150px;
+    -webkit-animation: bounce 4s linear infinite;
+    animation: bounce 4s linear infinite
+}
+
+@-webkit-keyframes bounce {
+
+    0%,
+    to {
+        top: 0
+    }
+
+    50% {
+        top: 20px
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    to {
+        top: 0
+    }
+
+    50% {
+        top: 20px
+    }
+}
+
+
+.banner-slide-child {
+    height: 180px;
+}
+
+.banner-slide-child  h2 {
+    margin-bottom: 5px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 400;
+    text-shadow: 0 0 8px #000, 0 0 8px #000;
+    line-height: 1;
+}
+
+.category-item {
+    width: 100%;
+    height: 120px;
+    position: relative;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .8);
+    cursor: pointer;
+    background: linear-gradient(0deg, #1e2024 0, #393f46);
+    transition: all 0.2s;
+    overflow: hidden;
+}
+
+
+.category-item:hover {
+    padding: 1px;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .9);
+    z-index: 3
+}
+
+.category-item img {
+    position: absolute;
+    bottom: 10px;
+    width: 180px;
+    /* height: 114px; */
+}
+
+.category-item .active {
+    display: none;
+}
+
+.category-item:hover .active {
+    display: block;
+}
+
+.category-item:hover .default {
+    display: none;
+}
+
+
+.casino-category {
+    background: url(../images/category/default/casino.png) no-repeat 50%;
+    border: 1px solid #ffffff25;
+    background-position-y: 0px;
+    background-size: 100%;
+}
+
+
+.casino-category:hover {
+    background: url(../images/category/active/casino.png) no-repeat 50%;
+    border: 1px solid orange;
+    background-position-y: -50px;
+    background-size: 100%;
+}
+
+.slot-category {
+    background: url(../images/category/default/slot.png) no-repeat 50%;
+    border: 1px solid #ffffff25;
+    background-position-y: 0px;
+    background-size: 100%;
+}
+
+
+.slot-category:hover {
+    background: url(../images/category/active/slot.png) no-repeat 50%;
+    border: 1px solid #0c91e6;
+    background-position-y: -50px;
+    background-size: 100%;
+}
+
+.sports-category {
+    background: url(../images/category/default/sports.png) no-repeat 50%;
+    border: 1px solid #ffffff25;
+    background-position-y: 0px;
+    background-size: 100%;
+}
+
+.sports-category:hover {
+    background: url(../images/category/active/sports.png) no-repeat 50%;
+    border: 1px solid #1ea809;
+    background-position-y: -50px;
+    background-size: 100%;
+}
+
+.minigame-category {
+    background: url(../images/category/default/minigame.png) no-repeat 50%;
+    border: 1px solid #ffffff25;
+    background-position-y: 0px;
+        background-size: 100%;
+}
+
+.minigame-category:hover {
+    background: url(../images/category/active/minigame.png) no-repeat 50%;
+    border: 1px solid #e0261b;
+    background-position-y: -50px;
+    background-size: 100%;
+}
+
+.jackpot_wrap .jackpot_row {
+   
+    
+}
+.jackpot-wrapper {
+    border: 1px solid #4491b3;
+    background: url(../images/bg/jackpot-bg.png) no-repeat 50%;
+    box-shadow: inset 0 -60px 60px 0 rgba(0, 0, 0, .7);
+}
+
+.jackpot-box {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background: url(../images/bg/jackpot.png) 0/480px repeat-y;
+    -webkit-animation: drop_coin 5s linear infinite;
+    animation: drop_coin 5s linear infinite;
+}
+
+.jackpot-box .jackpot-title {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #377692;
+    background: rgba(21, 23, 26, .8);
+    border-radius: 10px;
+    box-shadow: inset 0 6px 20px 2px rgba(0, 0, 0, .7);
+}
+
+
+@-webkit-keyframes drop_coin {
+    0% {
+        background-position: 50px -525px
+    }
+
+    to {
+        background-position: 50px 0
+    }
+}
+
+@keyframes drop_coin {
+    0% {
+        background-position: 50px -525px
+    }
+
+    to {
+        background-position: 50px 0
+    }
+}
+
+
+.home_board {
+    border: 1px solid #2e3239;
+    background: #1f2125;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .7);
+}
+
+.home_board h3 {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.home_board h3 img {
+    width: auto;
+    height: 30px;
+    margin: 0 10px 0 0;
+}
+
+
+.board-lists li:nth-child(odd) {
+    background-color: #141518;
+}
+
+.cs-wrapper {
+    padding: 20px 0;
+    border: 1px solid #2e3239;
+    background: #1f2125;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .7);
+}
+
+
+

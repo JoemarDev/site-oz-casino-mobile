@@ -1,0 +1,33 @@
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px;
+}
+
+.pagination li {
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination li.number {
+    margin: 3px;
+    height: 41.54px;
+    width: 41.54px;
+    border-radius: 5px;
+    background: #3a3b42;
+    font-size: 18px;
+    color: #fff;
+    box-sizing: border-box;
+
+}
+
+.pagination li.active {
+    background: #e1ca84 !important;
+    background: -moz-linear-gradient(top, #e1ca84 0%, #ac8633 100%) !important;
+    background: -webkit-linear-gradient(top, #e1ca84 0%, #ac8633 100%) !important;
+    background: linear-gradient(to bottom, #e1ca84 0%, #ac8633 100%) !important;
+    color: #030303;
+}

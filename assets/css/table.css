@@ -1,0 +1,241 @@
+.qna-table {
+    width: 100%;
+    color: #fff;
+    border-top: 2px solid #ef679a;
+    border-collapse: collapse;
+}
+
+.qna-table th {
+    height: 20px;
+    font-size: 14px !important;
+    /* border-bottom: 1px solid #56575f; */
+    padding: 13px 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    background: #16181b;
+}
+
+.qna-table th:first-child {
+    width: 20%;
+}
+
+.qna-table td {
+    height: 45px;
+    font-weight: 500;
+    color: #c1c1c1;
+    font-size: 14px;
+    border-bottom: 1px solid #24262b;
+    border-left: 0;
+    cursor: pointer;
+    background: #11161a;
+}
+
+
+
+.qna-table td:nth-child(2) {
+    color: #fff;
+    font-weight: 600;
+}
+
+
+.qna-table tr:hover td {
+    background: #333333c2;
+    /* border-bottom: 1px solid #e73b54; */
+}
+
+.no-hover:hover {
+    background: #11161a !important;
+}
+
+.qna-table td button {
+    font-size: 18px;
+    width: 49px;
+    height: 27px;
+    padding: 0;
+    line-height: 27px;
+    font-size: 13px;
+    color: #ffffff !important;
+    background: #ef4444;
+    border: 0;
+    border-radius: 3px;
+}
+
+.footer-button-qna {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-button-qna button {
+    min-width: 114px;
+    height: 46px;
+    line-height: 46px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    background: #ef4444;
+    border-radius: 5px;
+    padding: 0 15px;
+    border: none;
+    font-weight: 600;
+}
+
+.qna-delete {
+    background: #3a3b42;
+    color: #fff !important;
+}
+
+
+.qna-quick {
+    position: relative;
+    border: 1px solid #ef679a;
+    padding: 0 !important;
+    border-radius: 5px;
+
+}
+
+.qna-quick .inner-wrapper {
+    background: #e1ca84 !important;
+    background: -moz-linear-gradient(top, #e1ca84 0%, #ac8633 100%) !important;
+    background: -webkit-linear-gradient(top, #e1ca84 0%, #ac8633 100%) !important;
+    background: linear-gradient(to bottom, #e1ca84 0%, #ac8633 100%) !important;
+    border: 1px solid #333;
+    color: #000;
+    box-sizing: border-box;
+    position: relative;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    line-height: 42px;
+}
+
+
+
+.qna-write {
+    position: relative;
+    border: 1px solid #212121 !important;
+    padding: 0 !important;
+
+    border-radius: 5px;
+
+}
+
+.qna-write .inner-wrapper {
+    background-image: linear-gradient(#3a3b42, #3a3b42);
+    border: 1px solid #333;
+    color: #fff !important;
+    box-sizing: border-box;
+    position: relative;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    line-height: 42px;
+}
+
+
+
+.table-memo-content {
+padding: 30px;
+    font-size: 14px;
+}
+
+.qna-message-header-block {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 10px;
+    font-size: 14px;
+    border-bottom: 1px solid #56575f;
+}
+
+.qna-message-header-block img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.qna-message-header-block span {
+    margin-right: 10px;
+}
+
+.qna-message-header-block span:last-child {
+    margin-left: auto;
+}
+
+.qna-message-header-block:last-child {
+    border-bottom: none;
+}
+
+
+.qna-message-content {
+    padding: 20px;
+    background: #16181b;
+    border-top: 2px solid #ef679a;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 5px;
+    min-height: 88px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.qna-writing {
+    background: transparent;
+    font-size: 15px;
+    color: #fff;
+    outline: none;
+    border: 0;
+    padding-left: 20px;
+
+
+}
+
+textarea.qna-writing {
+    width: 100%;
+    box-sizing: border-box;
+    height: 300px;
+}
+
+
+.blue-style {
+    position: relative;
+    border: 1px solid #0867b3 !important;
+    padding: 0 !important;
+    border-radius: 5px;
+
+}
+
+.blue-style .inner-wrapper {
+    background-image: linear-gradient(#125489, #03a9f4);
+    border: 1px solid #222;
+    color: #fff;
+    box-sizing: border-box;
+    position: relative;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    line-height: 42px;
+}
+
+
+.red-style {
+    position: relative;
+    border: 1px solid #d85c38 !important;
+    padding: 0 !important;
+    border-radius: 5px;
+
+}
+
+.red-style .inner-wrapper {
+    background-image: linear-gradient(#af300c, #bb432e);
+    border: 1px solid #222;
+    color: #fff;
+    box-sizing: border-box;
+    position: relative;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    line-height: 42px;
+}

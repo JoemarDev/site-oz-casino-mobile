@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
+    <title>SQUID CASINO | Announcement</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/dialog.css">
+    <link rel="stylesheet" href="./assets/css/table.css">
+    <link rel="stylesheet" href="./assets/css/transaction-table.css">
+    <link rel="stylesheet" href="./assets/css/pagination.css">
+
+    <!-- Odometer Library -->
+    <link rel="stylesheet" href="./assets/css/odometer-theme-default.css" />
+
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./assets/js/tailwind.config.js"></script>
+    <!-- Swiper Js CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+</head>
+
+<body class="custom-scroll">
+    <!-- Header Section -->
+    <section>
+        <!-- Header 1 -->
+        <div class="bg-body-primary">
+            <div class="guess-bar">
+                <div class="container flex justify-end items-center py-4 gap-2 mx-auto">
+                    <button class="button-main btn-invert" onclick="OpenLoginDialog()">로그인</button>
+                    <button class="button-main" onclick="OpenRegisterDialog()">회원가입</button>
+                </div>
+            </div>
+            <div class="user-bar hidden">
+                <div class="container flex justify-between items-center py-4 gap-2 mx-auto">
+                    <div class="flex items-center gap-4 text-white font-bold text-sm">
+                        <p>카지노머니: <span class="mx-1 text-body-yellow">888,888,888</span>원</p>
+                        <p>포인트: <span class="mx-1 text-body-yellow">666,666,666</span>원</p>
+                    </div>
+
+                    <div class="flex items-center gap-2 text-white text-sm font-bold">
+                        <p><span class="mx-1 text-body-pink">LV. 1</span>홍길동 님</p>
+                        <p>보유머니: <span class="mx-1 text-body-yellow">999,999,999</span> 원</p>
+                        <button class="button-main   btn-invert">빠른계좌문의</button>
+                        <button class="button-main" onclick="logoutAccount()">로그아웃</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Header 2 -->
+        <div class="bg-body-secondary">
+            <div class="container flex justify-between items-center py-2 gap-2 mx-auto">
+                <div onclick="location.href= 'index.html'" class="cursor-pointer">
+                    <img class="w-56" src="./assets/images/logo/logo.png" alt="logo">
+                </div>
+                <ul class="flex items-center justify-end gap-4">
+                    <li class="app-menu">
+                        <a href="announcement.html">공지사항</a>
+                    </li>
+                    <li class="app-menu">
+                        <a href="event.html">이벤트</a>
+                    </li>
+                    <li class="app-menu ">
+                        <a href="customer-service.html">고객센터</a>
+                    </li>
+                    <li class="app-menu ">
+                        <a href="deposit.html">입금신청</a>
+                    </li>
+                    <li class="app-menu active">
+                        <a href="withdrawal.html">출금신청</a>
+                    </li>
+                    <li class="app-menu">
+                        <a href="#">마이페이지</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Header 3 -->
+        <div class="bg-body-tertiary">
+            <div class="container py-2 mx-auto">
+                <div class="scroll_row">
+                    <div class="scrolling_box">
+                        <div class="scr_svg"><img src="./assets/images/icons/speaker.svg" class="svg_scroll"></div>
+
+                        <div class="scr_box" style="animation-duration: 30s;">
+                            <span>SQUID 카지노에 오신 것을 환영합니다! </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Body Section -->
+    <section id="main-body">
+        <div class="container mx-auto">
+            <!-- Banner Section -->
+            <div class="text-center h-56 flex items-center justify-center pb-8">
+                <h2 class="text-5xl font-bold text-body-pink">환전신청</h2>
+            </div>
+
+            <!-- Table Body Section -->
+
+            <div class="w-full">
+                <div class="flex rounded overflow-hidden mb-2">
+                    <div onclick="window.location.href='deposit.html'"
+                        class=" cursor-pointer w-full py-2  text-center font-bold bg-white">충전신청</div>
+                    <div onclick="window.location.href='withdrawal.html'"
+                        class="border-r cursor-pointer w-full py-2  text-center font-bold  bg-body-pink">환전신청</div>
+                    <div onclick="window.location.href='point-history.html'"
+                        class=" cursor-pointer w-full py-2  text-center font-bold bg-white">포인트전환 내역</div>
+                </div>
+
+                <div class="p-5 rounded bg-body-primary text-white border border-body-secondary mb-2">
+                    <div class="flex items-center gap-1">
+                        <img class="w-8" src="./assets/images/icons/warning.svg" alt="">
+                        <h2 class="text-yellow font-bold text-xl mb-2">필독/주의사항</h2>
+                    </div>
+
+                    <div class="pl-9  leading-8 font-normal">
+                        <p class="font-normal">① 입금하실 계좌에 PC 뱅킹, 폰뱅킹, 무통장 입금, ATM등의 입금 방법중 하나를 선택하여</p>
+                        <p class="font-normal">② 환전비밀번호가 동일한 경우에만 환전신청이 가능하니 주의하시기 바랍니다.</p>
+                        <p class="font-normal">③ 접수는 24시간 실시간으로 처리되며 우선적으로 보유금액에서 차감 됩니다.</p>
+                        <p class="font-normal">④ 23시30분부터 00시30분까지는 국내은행 공동망 점검시간으로 환전이 불가합니다.</p>
+                        <p class="font-normal">⑤ 수표 입금시 충전처리가 되지않으며, 혹시 입금을 하셨을 경우 바로 환전이 불가합니다.</p>
+                        <p class="font-normal">⑤ 최소 환전금액은 10,000원이며 단위는 10,000원입니다.</p>
+                        <p class="font-normal">⑥ 계좌변경은 반드시 환전 신청하시기전 고객센터로 신청하여 주십시요.</p>
+                        <p class="font-normal">⑦ 요청하신 환전 , 취소를 원하실경우 고객센터로 문의 바랍니다.</p>
+                        <p class="font-normal">⑧ 회원님들의 배팅이 몰리는 대상 경기가 끝난 후에는 많은 환전량이 발생되어 환전이 잠시 지연될수 있습니다.</p>
+                        <p class="font-normal">⑨ 1회 최대 환전금액 500만원 1일 최대 환전금액 3천만원</p>
+                        <p class="font-normal">⑩ 환전신청은 2시간 단위로 진행 가능합니다.</p>
+                    </div>
+                </div>
+
+              
+
+                <table class="transaction-table">
+                    <tbody>
+                    
+                        <tr>
+                            <th>보유머니</th>
+                            <td>
+                                <div class="transaction-child-content">
+                                    <div class="transaction-content-flex">
+                                        <img src="./assets/images/icons/wallet.svg" alt="">
+                                        <label><span class="!text-body-yellow">31,000</span> 원</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>입금신청금액</th>
+                            <td>
+                                <div class="transaction-child-content">
+                                    <span class="red warning-text-notice">* 환전 신청을 완료하게되면 보유머니에서 신청한 금액만큼 차감되며 고객님의 계좌번호로 입금됩니다.</span>
+                                    <div class="transaction-content-flex">
+                                        <input class="amount-input" type="text">
+                                        <button class="transaction-money-button">1만원</button>
+                                        <button class="transaction-money-button">3만원</button>
+                                        <button class="transaction-money-button">5만원</button>
+                                        <button class="transaction-money-button">10만원</button>
+                                        <button class="transaction-money-button">50만원</button>
+                                        <button class="transaction-money-button">100만원</button>
+                                        <button class="transaction-money-button active">정정</button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="submit-trasaction-button-container">
+                    <button class="submit-transaction-button">충전신청</button>
+                </div>
+
+                <div class="transaction-history-table-container">
+                    <h3>◎충전신청내역</h3>
+
+                    <table class="transaction-history-table">
+                        <thead>
+                            <tr>
+                                <th>신청시간</th>
+                                <th>신청금액</th>
+                                <th>상태</th>
+                                <th>처리시간</th>
+                                <th>삭제</th>
+                            </tr>
+
+                        </thead>
+                    </table>
+                </div>
+
+                <ul class="pagination">
+                    <li><img src="./assets/images/icons/prev.png" alt=""></li>
+                    <li><img src="./assets/images/icons/prev-single.png" alt=""></li>
+
+                    <li><img src="./assets/images/icons/next-single.png" alt=""></li>
+                    <li><img src="./assets/images/icons/next.png" alt=""></li>
+                </ul>
+
+
+
+
+
+            </div>
+
+
+            <!-- Customer Service Section -->
+            <section class="container mb-4">
+                <div class="cs-wrapper">
+                    <div class="grid grid-cols-4  px-4">
+                        <div class="px-4 p-2 flex items-center gap-2 border-r border-dashed border-slate-700/50">
+                            <div class="wrapper bg-body-pink w-12 p-2 rounded">
+                                <img src="./assets/images/svg/footer-1.svg" alt="">
+                            </div>
+                            <div class="text-white">
+                                <h2 class="text-lg">365 결제문의</h2>
+                                <h2 class="font-bold text-lg">
+                                    <span>텔레그램</span>
+                                    <span class="text-body-pink">SQUID CASINO</span>
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="px-4 p-2 flex items-center gap-2 border-r border-dashed border-slate-700/50">
+                            <div class="wrapper bg-body-brown w-12 p-2 rounded">
+                                <img src="./assets/images/svg/footer-2.svg" alt="">
+                            </div>
+                            <div class="text-white">
+                                <h2 class="text-lg">365 결제문의</h2>
+                                <h2 class="font-bold text-lg">
+                                    <span>텔레그램</span>
+                                    <span class="text-amber-500">SQUID CASINO</span>
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="px-4 p-2 flex items-center gap-2 border-r border-dashed border-slate-700/50">
+                            <div class="wrapper bg-body-green w-12 p-2 rounded">
+                                <img src="./assets/images/svg/footer-3.svg" alt="">
+                            </div>
+                            <div class="text-white">
+                                <h2 class="text-lg">궁금한 점이 있으세요?</h2>
+                                <h2 class="font-bold text-lg">
+
+                                    <span class="text-green-500">자주 묻는 질문</span>
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="px-4 p-2 flex items-center gap-2 ">
+                            <div class="wrapper bg-body-blue w-12 p-2 rounded">
+                                <img src="./assets/images/svg/footer-4.svg" alt="">
+                            </div>
+                            <div class="text-white">
+                                <h2 class="text-lg">파트너 제휴문의</h2>
+                                <h2 class="font-bold text-lg">
+                                    <span>텔레그램</span>
+                                    <span class="text-sky-400">SQUID Partner</span>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Progressive Jackpot -->
+            <section class="container mx-auto mb-4">
+                <div class="jackpot-wrapper">
+                    <div class="jackpot-box grid grid-cols-2">
+                        <div class="jackpot-title">
+                            <h2 class="text-4xl font-bold text-body-yellow mb-2">PROGRESSIVE JACKPOT</h2>
+                            <h3 class="text-xl  text-white">화려한 애니메이션과 3D효과!! 잭팟에 도전하세요!!</h3>
+                        </div>
+                        <div class="ml-auto flex items-center gap-2">
+                            <h2 class="currency-sign">\</h2>
+                            <div id="odometer" class="odometer">85484080</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+    </section>
+
+    <!-- Footer Section -->
+    <div class="footer container mx-auto p-5 text-center py-8">
+        <div class="grid grid-cols-8">
+            <div class="col-span-1">
+                <img src="./assets/images/footer/1.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/2.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/3.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/4.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/5.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/6.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/7.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/8.png" alt="">
+            </div>
+        </div>
+        <div class="grid grid-cols-8">
+            <div class="col-span-1">
+                <img src="./assets/images/footer/9.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/10.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/11.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/12.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/13.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/14.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/15.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/16.png" alt="">
+            </div>
+        </div>
+        <div class="grid grid-cols-8">
+            <div class="col-span-1">
+                <img src="./assets/images/footer/17.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/18.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/19.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/20.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/21.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/22.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/23.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/24.png" alt="">
+            </div>
+        </div>
+        <div class="grid grid-cols-8">
+            <div class="col-span-1">
+                <img src="./assets/images/footer/25.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/26.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/27.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/28.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/29.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/30.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/31.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/32.png" alt="">
+            </div>
+        </div>
+        <div class="grid grid-cols-8">
+            <div class="col-span-1">
+                <img src="./assets/images/footer/33.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/34.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/35.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/36.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/37.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/38.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/39.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/40.png" alt="">
+            </div>
+        </div>
+        <div class="grid grid-cols-8">
+            <div class="col-span-1">
+                <img src="./assets/images/footer/41.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/42.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/43.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/44.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/45.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/46.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/47.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/48.png" alt="">
+            </div>
+        </div>
+        <div class="grid grid-cols-9 mb-10">
+            <div class="col-span-1"></div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/49.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/50.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/51.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/52.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/53.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/54.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/55.png" alt="">
+            </div>
+            <div class="col-span-1">
+                <img src="./assets/images/footer/56.png" alt="">
+            </div>
+        </div>
+
+
+        <label class="text-white text-sm">
+            Copyright © 2023
+            <span class="text-body-pink">SQUID CASINO.</span>
+            All right reserved.
+        </label>
+
+    </div>
+    <!-- Footer Section -->
+
+
+
+
+</body>
+<script src="./assets/js/jquery-3.1.0.js"></script>
+<script src="./assets/js/odometer.js"></script>
+<script src="./assets/js/script.js"></script>
+
+</html>

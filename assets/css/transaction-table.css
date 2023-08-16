@@ -1,0 +1,287 @@
+.transaction-table {
+    border-top: 2px solid #ef679a;
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+
+.transaction-table tbody th {
+    padding: 12px 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: #d6d6de;
+    background: #16181b;
+    border-bottom: 1px solid #24262b;
+    width: 20%;
+
+}
+
+.transaction-table tbody td {
+    padding: 15px 0 15px 15px;
+    background: #0e0d0d;
+    border-bottom: 1px solid #24262b;
+    font-size: 16px;
+    color: #333;
+}
+
+.transaction-table tbody td .transaction-content-flex {
+    display: flex;
+    align-items: center;
+}
+
+.transaction-table tbody td .transaction-content-flex .transaction-choice-with-radio {
+    background: linear-gradient(#fd009c, #4f09b7);
+    border-radius: 10px;
+    display: inline-block;
+    padding: 12px;
+    margin-right: 5px;
+    color: #fff;
+    margin-bottom: 10px;
+
+}
+
+
+.transaction-table tbody td .transaction-content-flex .transaction-choice-with-radio span {
+    font-size: 15px;
+}
+
+.transaction-table tbody td span,
+p {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.transaction-table tbody td .transaction-content-flex img {
+    width: 30px;
+}
+
+.transaction-table tbody td .transaction-content-flex img {
+    margin-right: 20px;
+}
+
+
+.transaction-table tbody td .transaction-content-flex span,
+label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+
+}
+
+.transaction-table tbody td .transaction-child-content .account-number {
+padding: 10px 59px 10px 10px;
+    border: 1px solid #512636;
+    background: #0f1012;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 40px;
+    font-weight: 300;
+    color: #fff;
+    margin-left: 5px;
+    font-size: 14px;
+    margin-right: 5px;
+    color: #ef679a;
+    font-weight: 600;
+}
+
+.transaction-table tbody td .transaction-child-content .amount-input {
+padding: 10px 59px 10px 10px;
+    border: 1px solid #512636;
+    background: #0f1012;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 40px;
+    font-weight: 300;
+    color: #fff;
+    margin-left: 5px;
+    font-size: 14px;
+    margin-right: 5px;
+    color: #ef679a;
+    font-weight: 600;
+}
+
+
+
+.transaction-table tbody td .transaction-child-content .warning-text-notice {
+    margin-bottom: 5px !important;
+    display: block;
+}
+
+.transaction-table tbody td .transaction-money-button.active {
+    /* border: 1px solid #e1ca84; */
+    background: #e1ca84;
+    background: -moz-linear-gradient(top, #f3a4c1 0%, #ec3075 100%);
+    background: -webkit-linear-gradient(top, #f3a4c1 0%, #ec3075 100%);
+    background: linear-gradient(#f3a4c1, #eb5e92 50%, #ec3075 80%);
+    color: #030303;
+}
+
+.transaction-table tbody td .transaction-money-button {
+    background: #100b01;
+    border: 1px solid #4e1e30;
+    color: #ec3075;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 10px;
+    width: 80px;
+    margin-right: 2px;
+    border-radius: 2px;
+}
+
+
+.transaction-table tbody td .transaction-money-button:hover {
+    border: 1px solid #4e1e30;
+    background: #f3a4c1;
+    background: -moz-linear-gradient(top, #eb5e92 0%, #ec3075 100%);
+    background: -webkit-linear-gradient(top, #eb5e92 0%, #ec3075 100%);
+background: linear-gradient(#f3a4c1, #eb5e92 50%, #ec3075 80%);
+    color: #030303;
+}
+
+
+
+.transaction-table tbody td .transaction-money-button.gray {
+    background: #67686d;
+}
+
+.transaction-table tbody td .transaction-money-button.gray:hover {
+    background: #73738e;
+    box-shadow: -2px -2px 1px #67686d;
+}
+
+
+
+.submit-trasaction-button-container {
+    text-align: center;
+    padding: 20px 0px;
+}
+
+.submit-transaction-button {
+    border: 1px solid #923054;
+    background: #4e1e30;
+    background: -moz-linear-gradient(#f3a4c1, #eb5e92 50%, #ec3075 80%);
+    background: -webkit-linear-gradient(#f3a4c1, #eb5e92 50%, #ec3075 80%);
+background: linear-gradient(#f3a4c1, #eb5e92 50%, #ec3075 80%);
+    color: #030303;
+    height: 3rem;
+    width: 300px;
+    font-weight: 600;
+    font-size: 24px;
+    border-radius: 5px;
+
+}
+
+.submit-transaction-button:hover {
+    background: #4e1e30;
+    color: #f3a4c1;
+}
+
+
+.submit-transaction-button-2 {
+    border: 1px solid #e1ca84;
+    background: #e1ca84;
+    background: -moz-linear-gradient(top, #e1ca84 0%, #ac8633 100%);
+    background: -webkit-linear-gradient(top, #e1ca84 0%, #ac8633 100%);
+    background: linear-gradient(to bottom, #e1ca84 0%, #ac8633 100%);
+    color: #030303;
+    height: 3rem;
+    width: 300px;
+    font-weight: 600;
+    font-size: 24px;
+    border-radius: 5px;
+}
+
+.submit-transaction-button-2:hover {
+    background: #1e170f;
+    color: #e1ca84;
+}
+
+
+.transaction-history-table-container {
+    margin-top: 50px;
+}
+
+.transaction-history-table-container h3 {
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+
+.transaction-history-table {
+    width: 100%;
+        color: #fff;
+        border-top: 2px solid #ef679a;
+        border-collapse: collapse;
+}
+
+.transaction-history-table th {
+    height: 20px;
+    font-size: 16px;
+    border-bottom: 1px solid #56575f;
+    padding: 13px 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    background: #0f1012;
+}
+
+.transaction-history-table th:first-child {
+    width: 20%;
+}
+
+.transaction-history-table td {
+    height: 45px;
+    font-weight: 500;
+    color: #c1c1c1;
+    font-size: 14px;
+    border-bottom: 1px solid #3e3f46;
+    border-left: 0;
+    cursor: pointer;
+    background: #000;
+}
+
+.transaction-history-table td:nth-child(2) {
+    color: #fff;
+    font-weight: 600;
+}
+
+
+.transfer-button {
+    border: 1px solid #e1ca84;
+    color: #030303;
+    height: 3rem;
+    width: 300px;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 5px;
+    background: #0e0d0d;
+    color: #e1ca84;
+}
+
+
+.transfer-button:nth-child(1):hover {
+    background: #e1ca84;
+    background: -moz-linear-gradient(top, #e1ca84 0%, #ac8633 100%);
+    background: -webkit-linear-gradient(top, #e1ca84 0%, #ac8633 100%);
+    background: linear-gradient(to bottom, #e1ca84 0%, #ac8633 100%);
+    color: #000;
+}
+
+
+
+.transfer-button:nth-child(2):hover {
+    background: #e1ca84;
+    background: -moz-linear-gradient(top, #e1ca84 0%, #ac8633 100%);
+    background: -webkit-linear-gradient(top, #e1ca84 0%, #ac8633 100%);
+    background: linear-gradient(to bottom, #e1ca84 0%, #ac8633 100%);
+    color: #000;
+
+}
