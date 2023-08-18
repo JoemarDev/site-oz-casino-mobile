@@ -22,6 +22,14 @@ const closeAll = () => {
 	CloseCasinoGames();
 };
 
+const OpenSideBar = () => {
+	$(".SIDEBAR_WRAPPER").show();
+};
+
+const CloseSidebar = () => {
+	$(".SIDEBAR_WRAPPER").hide();
+};
+
 const OpenLoginDialog = () => {
 	$(".REGISTER_WRAPPER").hide();
 	$("body").css("overflowY", "hidden");

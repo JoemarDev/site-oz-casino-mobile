@@ -25,74 +25,17 @@
 </head>
 
 <body class="custom-scroll">
-    <!-- Header Section -->
-    <section>
-        <!-- Header 1 -->
-        <div class="bg-body-primary">
-            <div class="guess-bar">
-                <div class="container flex justify-end items-center py-4 gap-2 mx-auto">
-                    <button class="button-main btn-invert" onclick="OpenLoginDialog()">로그인</button>
-                    <button class="button-main" onclick="OpenRegisterDialog()">회원가입</button>
-                </div>
+    <!-- Section Header -->
+    <section class="bg-body-primary">
+        <div class="flex items-center justify-between p-4">
+            <div>
+                <img onclick="OpenSideBar()" class="w-8" src="./assets/images/icons/menu.svg" alt="">
             </div>
-            <div class="user-bar hidden">
-                <div class="container flex justify-between items-center py-4 gap-2 mx-auto">
-                    <div class="flex items-center gap-4 text-white font-bold text-sm">
-                        <p>카지노머니: <span class="mx-1 text-body-yellow">888,888,888</span>원</p>
-                        <p>포인트: <span class="mx-1 text-body-yellow">666,666,666</span>원</p>
-                    </div>
-
-                    <div class="flex items-center gap-2 text-white text-sm font-bold">
-                        <p><span class="mx-1 text-body-pink">LV. 1</span>홍길동 님</p>
-                        <p>보유머니: <span class="mx-1 text-body-yellow">999,999,999</span> 원</p>
-                        <button class="button-main   btn-invert">빠른계좌문의</button>
-                        <button class="button-main" onclick="logoutAccount()">로그아웃</button>
-                    </div>
-                </div>
+            <div>
+                <img class="w-28" src="./assets/images/logo/logo.png" alt="">
             </div>
-        </div>
-
-
-        <!-- Header 2 -->
-        <div class="bg-body-secondary">
-            <div class="container flex justify-between items-center py-2 gap-2 mx-auto">
-                <div onclick="location.href= 'index.html'" class="cursor-pointer">
-                    <img class="w-56" src="./assets/images/logo/logo.png" alt="logo">
-                </div>
-                <ul class="flex items-center justify-end gap-4">
-                    <li class="app-menu">
-                        <a href="announcement.html">공지사항</a>
-                    </li>
-                    <li class="app-menu active">
-                        <a href="event.html">이벤트</a>
-                    </li>
-                    <li class="app-menu ">
-                        <a href="customer-service.html">고객센터</a>
-                    </li>
-                    <li class="app-menu">
-                        <a href="deposit.html">입금신청</a>
-                    </li>
-                    <li class="app-menu">
-                        <a href="withdrawal.html">출금신청</a>
-                    </li>
-                    <li class="app-menu">
-                        <a href="#">마이페이지</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!-- Header 3 -->
-        <div class="bg-body-tertiary">
-            <div class="container py-2 mx-auto">
-                <div class="scroll_row">
-                    <div class="scrolling_box">
-                        <div class="scr_svg"><img src="./assets/images/icons/speaker.svg" class="svg_scroll"></div>
-
-                        <div class="scr_box" style="animation-duration: 30s;">
-                            <span>SQUID 카지노에 오신 것을 환영합니다! </span>
-                        </div>
-                    </div>
-                </div>
+            <div>
+                <img class="w-8" src="./assets/images/icons/account.svg" alt="">
             </div>
         </div>
     </section>
