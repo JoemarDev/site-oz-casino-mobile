@@ -326,3 +326,14 @@
     background: #0e0d0d;
     color: #f3a4c1;
 }
+
+.transaction-history-table-container {
+    margin-top: 50px;
+}
+
+.transaction-history-table-container h3 {
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 20px;
+}

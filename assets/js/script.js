@@ -20,6 +20,8 @@ const closeAll = () => {
 	CloseRegisterDialog();
 	CloseSlotGames();
 	CloseCasinoGames();
+	CloseAccountBar();
+	CloseSidebar();
 };
 
 const OpenSideBar = () => {
@@ -53,6 +55,7 @@ const CloseRegisterDialog = () => {
 };
 
 const OpenCasinoGames = () => {
+	$(".SIDEBAR_WRAPPER").hide();
 	$("body").css("overflowY", "hidden");
 	$(".CASINO_GAME_WRAPPER").show();
 };
@@ -63,6 +66,7 @@ const CloseCasinoGames = () => {
 };
 
 const OpenSlotGames = () => {
+	$(".SIDEBAR_WRAPPER").hide();
 	$("body").css("overflowY", "hidden");
 	$(".SLOT_GAME_WRAPPER").show();
 };
@@ -72,6 +76,15 @@ const CloseSlotGames = () => {
 	$(".SLOT_GAME_WRAPPER").hide();
 };
 
+const OpenAccountBar = () => {
+	$(".account-bar").show();
+	$("body").css("overflowY", "hidden");
+};
+
+const CloseAccountBar = () => {
+	$(".account-bar").hide();
+	$("body").css("overflowY", "scroll");
+};
 const swiper = new Swiper(".swiper", {
 	speed: 400,
 	spaceBetween: 100,
@@ -113,3 +126,24 @@ const openEvent = (elem) => {
 	$(".board-lists").hide();
 	$(".event-board").show();
 };
+
+$(document).ready(() => {
+	resizeIframe();
+});
+
+const resizeIframe = () => {
+	const gameContainer = $("#gameContainer");
+	const gameFrame = $("#liveFrame");
+
+	let ComParentHeight = gameContainer[0].offsetWidth / ($("#liveFrame").height() * 0.001993);
+
+	const scaleSize = gameContainer[0].offsetWidth / gameFrame.width();
+
+	gameFrame.css({
+		transform: `scale(${scaleSize})`,
+	});
+
+	$("#gameContainer").height(ComParentHeight);
+};
+// // Resize the iframe initially and whenever the window is resized
+// $(window).on("resize", resizeIframe);

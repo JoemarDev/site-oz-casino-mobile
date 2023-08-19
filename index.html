@@ -8,6 +8,7 @@
     <title>SQUID CASINO</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/dialog.css">
+        <link rel="stylesheet" href="./assets/css/transaction-table.css">
     
 
     <!-- Odometer Library -->
@@ -31,10 +32,10 @@
                 <img onclick="OpenSideBar()" class="w-8" src="./assets/images/icons/menu.svg" alt="">
             </div>
             <div>
-                <img class="w-28" src="./assets/images/logo/logo.png" alt="">
+                <img class="w-28" onclick="location.href='index.html'" src="./assets/images/logo/logo.png" alt="">
             </div>
             <div >
-                <img class="w-8" src="./assets/images/icons/account.svg" alt="">
+                <img onclick="OpenAccountBar()" class="w-8" src="./assets/images/icons/account.svg" alt="">
             </div>
         </div>
     </section>
@@ -81,6 +82,66 @@
             </div>
            
         </section>
+
+        <div class="member-container hidden mt-9" style="display: block; ">
+            <!-- Member Account Information -->
+            <div class="bg-body-primary p-2 text-white">
+                <div class="grid grid-cols-2">
+                    <div class="p-2 col-span-1 border-t border-body-pink/20 border-2  h-12">
+                        <div class="flex items-center justify-between">
+                            <img class="w-6" src="./assets/images/icons/account.svg" alt="">
+                            <label class="flex items-center gap-2 font-semibold text-sm">
+                                <p><span class="text-yellow-500">LV. 1</span></p>
+                                <p>홍길동 님</p>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="p-2 col-span-1 border-t border-body-pink/20 border-2 border-x items-center h-12">
+                        <div class="flex items-center h-full justify-between text-sm font-semibold">
+                            <p class="mb-0">보유머니</p>
+                            <label><span class="text-yellow-500">100,000,000</span> 원</label>
+        
+                        </div>
+                    </div>
+                    <div class="px-2 py-1  col-span-1 border-t border-body-pink/20 border-2 border-t-0 border-x items-center ">
+                        <div class="flex justify-between items-center">
+                            <div class="text-sm font-semibold">
+                                <p class="text-xs">카지노머니</p>
+                                <label class="flex items-center gap-2">
+                                    <span class="text-yellow-500">100,000,000</span> 원
+                                </label>
+                            </div>
+                            <div>
+                                <img class="w-6" src="./assets/new_images/icons/exchange.svg" alt="">
+                            </div>
+                        </div>
+        
+                    </div>
+                    <div class="px-2 py-1 col-span-1 border-t border-body-pink/20 border-2 border-t-0 border-x items-center ">
+                        <div class="flex justify-between items-center">
+                            <div class="text-sm font-semibold">
+                                <p class="text-xs">포인트</p>
+                                <label class="flex items-center gap-2">
+                                    <span class="text-yellow-500">100,000,000</span> 원
+                                </label>
+                            </div>
+                            <div>
+                                <img class="w-6" src="./assets/new_images/icons/exchange.svg" alt="">
+                            </div>
+                        </div>
+        
+                    </div>
+                </div>
+        
+                <button onclick="OpenAccountDialog()"
+                    class="!rounded !text-lg button-main mt-4 w-full">
+                    빠른계좌문의
+                </button>
+            </div>
+            <!-- Member Account Information -->
+        
+        
+        </div>
 
         <!-- Category Section -->
         <section class="grid grid-cols-1 gap-2 mb-4 p-2">
@@ -1165,7 +1226,7 @@
         <div class="flex items-center justify-between p-4 bg-body-secondary">
             <div></div>
             <div>
-                <img class="w-28" src="./assets/images/logo/logo.png" alt="">
+                <img class="w-28" onclick="location.href='index.html'" src="./assets/images/logo/logo.png" alt="">
             </div>
             <div>
                 <img onclick="CloseSidebar()" class="w-8" src="./assets/images/icons/close.svg" alt="">
@@ -1174,9 +1235,9 @@
         <div class="h-full grid grid-cols-6">
             <div class="col-span-2 bg-body-tertiary">
                 <ul class="text-white font-bold text-sm">
-                    <li class="casino-lists-menu p-2 px-4 border-l-4  border-body-pink text-body-pink">파워볼</li>
-                    <li class="slot-lists-menu p-2 px-4 border-l-4 border-body-primary">카지노</li>
-                    <li class="p-2 px-4 border-l-4 border-body-primary" >슬롯</li>
+                    <li class="casino-lists-menu p-2 px-4 border-l-4  border-body-pink/10 text-body-pink" onclick="location.href='powerball.html'"onclick="location.href='powerball.html'">파워볼</li>
+                    <li class="slot-lists-menu p-2 px-4 border-l-4 border-body-primary" onclick="OpenCasinoGames()">카지노</li>
+                    <li class="p-2 px-4 border-l-4 border-body-primary" onclick="OpenSlotGames()" >슬롯</li>
                     <li class="p-2 px-4 border-l-4 border-body-primary">스포츠</li>
                     <li class="p-2 px-4 border-l-4 border-body-primary" onclick="location.href='announcement.html'">공지사항</li>
                     <li class="p-2 px-4 border-l-4 border-body-primary" onclick="location.href='betting-history.html'">베팅내역</li>
@@ -1187,10 +1248,10 @@
             </div>
         
             <div class="col-span-4 px-2">
-                <div class="casino-sidebar-content ">
-                    <div class="flex justify-between items-center w-full border-b border-body-pink py-2 px-2">
+                <div class="casino-sidebar-content">
+                    <div class="flex justify-between items-center w-full border-b border-body-pink/10 py-2 px-2">
                         <h2 class="text-body-pink font-bold">파워볼</h2>
-                        <img class="w-8" src="./assets/new_images/icons/down.svg" alt="">
+                        <img class="w-8" src="./assets/images/icons/down.svg" alt="">
                     </div>
                     <ul class="text-white text-sm font-semibold">
                         <li class="p-2" onclick="GoToCasino()">EOS 파워볼 3분</li>
@@ -1205,6 +1266,105 @@
         
         </div>
     </div>
+
+    <div class="fixed  top-0 w-full h-full bg-body-primary z-30 account-bar hidden" style="right: 0px;">
+            <!-- ACCOUNT BAR HEADER -->
+            <div class="grid grid-cols-8 items-center justify-between w-full p-2 py-4 bg-body-secondary border-b border-body-pink">
+                <div class="col-span-7">
+                    <div class="flex items-center gap-4 text-white">
+                        <label class="font-semibold text-sm flex items-center gap-1">
+                            <span class="text-body-pink ">LV.1</span>
+                            <span>홍길동</span>
+                            <span> 님,</span>
+                        </label>
+                        <label class="font-semibold text-sm flex items-center gap-1">
+                            <img class="w-4" src="./assets/images/icons/envelope.svg" alt="">
+                            <span>쪽지</span>
+                            <span class="text-body-pink ">0</span>
+                            <span>건</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="px-2 col-span-1 cursor-pointer" onclick="CloseAccountBar()">
+                    <img class="w-8 " src="./assets/images/icons/close.svg" alt="">
+                </div>
+            </div>
+
+            <!-- ACCOUNT BAR HEADER -->
+            <div class="grid grid-cols-8 items-center bg-body-secondary border-b border-body-pink/10 mb-4">
+                <div class="col-span-5 p-4  text-white">
+                    <label class="text-sm font-semibold">보유머니</label>
+                    <p class="text-body-pink font-semibold text-lg">100,000,000 원</p>
+                </div>
+                <div class="col-span-3 text-right px-4 py-2 pl-0 text-white text-xs font-semibold">
+                    <div class="text-left  py-2 gap-1 border-b border-body-pink/20">
+                        <label class="">카지노머니 :</label>
+                        <div class="flex items-center justify-start gap-1">
+                            <p class="text-body-pink ">100,000,000 <span class="text-white">원</span></p>
+                            <img class="w-6" src="./assets/images/icons/exchange.svg" alt="">
+                        </div>
+
+                    </div>
+
+                    <div class="text-left  py-2 gap-1">
+                        <label class="">포인트 :</label>
+                        <div class="flex items-center justify-start gap-1">
+                            <p class="text-body-pink  ">100,000,000 <span class="text-white">P</span></p>
+                            <img class="w-6" src="./assets/images/icons/exchange.svg" alt="">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-3 gap-2 text-white text-xs bg-body-secondary border-y border-body-pink/10 py-4 mb-4">
+                <div class="py-2 text-center" onclick="location.href='deposit.html'">
+                    <img class="w-10 h-10 mb-2 mx-auto" src="./assets/images/icons/deposit.svg" alt="">
+                    <p>충전신청</p>
+                </div>
+                <div class="py-2 text-center" onclick="location.href='withdrawal.html'">
+                    <img class="w-10 h-10 mb-2 mx-auto" src="./assets/images/icons/withdraw.svg" alt="">
+                    <p>환전신청</p>
+                </div>
+                <div class="py-2 text-center" onclick="location.href='point-history.html'">
+                    <img class="w-8 h-10 mb-2 mx-auto" src="./assets/images/icons/convert.svg" alt="">
+                    <p>포인트전환내역</p>
+                </div>
+                <div class="py-2 text-center" >
+                    <img class="w-10 h-10 mb-2 mx-auto" src="./assets/images/icons/account-inquiry.svg" alt="">
+                    <p>빠른계좌문의</p>
+                </div>
+
+                <div class="py-2 text-center" onclick="location.href='customer-service.html'">
+                    <img class="w-10 h-10 mb-2 mx-auto" src="./assets/images/icons/customer-service.svg" alt="">
+                    <p>고객센터</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 gap-4 text-white text-xs bg-body-secondary border-y border-body-pink/10 py-4 mb-4">
+
+                <div class="px-2 text-center flex items-center gap-2" onclick="location.href='betting-history.html'">
+                    <img class="w-6 h-6  " src="./assets/images/icons/betting-history.svg" alt="">
+                    <p class="text-sm font-semibold">베팅내역</p>
+                </div>
+                <div class="px-2 text-center flex items-center gap-2" onclick="location.href='event.html'">
+                    <img class="w-6 h-5  " src="./assets/images/icons/speaker.svg" alt="">
+                    <p class="text-sm font-semibold">공지사항</p>
+                </div>
+            </div>
+            <div class="p-1">
+                <div class=" border border-body-pink/10 rounded" style="padding : 2px">
+                        <div class="text-center">
+                            <button class="submit-deposit w-full">
+                                충전신청
+                            </button>
+                        </div>
+                  
+                </div>
+            </div>
+
+        </div>
+
+        
+
 
 
 

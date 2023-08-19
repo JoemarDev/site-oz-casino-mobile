@@ -6,10 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
-    <title>SQUID CASINO | Announcement</title>
+    <title>SQUID CASINO</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/dialog.css">
-    <link rel="stylesheet" href="./assets/css/table.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <link rel="stylesheet" href="./assets/css/dialog.css">
+        <link rel="stylesheet" href="./assets/css/table.css">
+        <link rel="stylesheet" href="./assets/css/transaction-table.css">
+        <link rel="stylesheet" href="./assets/css/pagination.css">
+    
+
 
     <!-- Odometer Library -->
     <link rel="stylesheet" href="./assets/css/odometer-theme-default.css" />
@@ -25,118 +31,238 @@
 </head>
 
 <body class="custom-scroll">
-        <!-- Section Header -->
-        <section class="bg-body-primary">
-            <div class="flex items-center justify-between p-4">
-                <div>
-                    <img onclick="OpenSideBar()" class="w-8" src="./assets/images/icons/menu.svg" alt="">
-                </div>
-                <div>
-                    <img class="w-28" onclick="location.href='index.html'" src="./assets/images/logo/logo.png" alt="">
-                </div>
-                <div>
-                    <img onclick="OpenAccountBar()" class="w-8" src="./assets/images/icons/account.svg" alt="">
-                </div>
+    <!-- Section Header -->
+    <section class="bg-body-primary">
+        <div class="flex items-center justify-between p-4">
+            <div>
+                <img onclick="OpenSideBar()" class="w-8" src="./assets/images/icons/menu.svg" alt="">
             </div>
-        </section>
+            <div>
+                <img class="w-28" onclick="location.href='index.html'" src="./assets/images/logo/logo.png" alt="">
+            </div>
+            <div>
+                <img onclick="OpenAccountBar()" class="w-8" src="./assets/images/icons/account.svg" alt="">
+            </div>
+        </div>
+    </section>
 
     <!-- Main Body Section -->
     <section id="main-body">
-        <div class="container mx-auto">
-         
-            <!-- Table Body Section -->
+        <div class="container mx-auto bg-body-primary border-2 border-body-secondary p-4">
+            <div id="gameContainer">
+          
+                <iframe id="liveFrame" src="https://ntry.com/scores/eos_powerball/3min/main.php" frameborder="0"></iframe>
+            </div>
+            <div class="container  text-white mx-auto bg-body-tertiary border-2 border-body-secondary" style="max-width: 1000px!important;">
+                <div class=" gap-2 px-4 my-2">
+                    <div class="   bg-body-secondary p-4 mb-2">
+                        <div class="text-center mb-2">
+                            <span>08-17</span>
+                            <span class="text-body-yellow font-bold">[260회차]</span>
+                        </div>
+                        <div class="timer">
+                            12:03
+                        </div>
+                        <div class="button-main !py-1 text-sm w-full m-auto flex items-center justify-center ">새로고침</div>
+                    </div>
+                    <div class="mb-2   bg-body-secondary p-4 items-center  ">
+                        <div class="h-9 mt-2  flex items-center justify-between font-bold text-sm">
+                            <span class="text-body-pink">보유금액</span>
+                            <span class="text-body-yellow">4,637,134 원</span>
+                        </div>
+                        <div class="h-9  flex items-center justify-between font-bold text-sm">
+                            <span class="text-body-pink">예상배당율</span>
+                            <span class="text-body-yellow">0 배</span>
+                        </div>
+                        <div class="h-9  flex items-center justify-between font-bold text-sm">
+                            <span class="text-body-pink">예상당첨금</span>
+                            <span class="text-body-yellow">0 원</span>
+                        </div>
+                        <div class="h-9  flex items-center justify-between font-bold text-sm">
+                            <span class="text-body-pink">배팅금액</span>
+                            <span class="text-body-yellow">
+                                <input type="text" class="input-1 w-full text-right" value="0">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="mb-2 bg-body-secondary p-4">
+                        <div class="grid grid-cols-3 gap-1 text-sm font-bold">
+                            <button class="py-2 bg-body-primary">10,000</button>
+                            <button class="py-2 bg-body-primary">50,000</button>
+                            <button class="py-2 bg-body-primary">100,000</button>
+                            <button class="py-2 bg-body-primary">500,000</button>
+                            <button class="py-2 bg-body-primary">1,000,000</button>
+                            <button class="py-2 bg-body-primary">3,000,000</button>
+                            <button class="py-2 bg-body-primary">올인</button>
+                            <button class="py-2 bg-body-primary">하프</button>
+                            <button class="py-2 bg-body-primary">초기화</button>
+                            <button class="py-2  col-span-3 button-main mt-2 items-center flex justify-center">배팅하기</button>
 
-            <div class="w-full mb-4">
-                <div class=" text-white mb-2">
-                    <h2 class="text-2xl font-bold">배팅내역</h2>
-                    <!-- <ul class="bg-body-primary text-xs p-4 px-8 rounded-full flex justify-end  gap-4">
-                        <li class="text-body-pink">배팅내역</li>
-                        <li>카지노로비1관 배팅내역</li>
-                        <li>카지노로비2관 배팅내역</li>
-                        <li>쪽지관리</li>
-                        <li>회원정보수정</li>
-                    </ul> -->
+                        </div>
+                    </div>
+                </div>
+                <div class=" gap-4 px-4 ">
+                    <div class="col-span-2   bg-body-secondary p-4 hidden">
+                        <div class="bg-body-primary text-center text-sm p-4 rounded mb-10">MY BETTING</div>
+                        <div class=" text-center text-sm p-4 rounded">선택게임</div>
+                    </div>
+                    <div class="col-span-7   bg-body-secondary p-4 pb-0 items-center  ">
+                        <div class=" gap-4">
+                            <div class="col-span-2">
+                                <h2 class="text-lg font-bold text-body-pink">파워볼</h2>
+                                <div class="grid grid-cols-2 gap-2 py-4">
+                                    <button class="bet-button gap-2">
+                                        <img class="w-6" src="./assets/images/betting/img_bet-odd.png" alt="">
+                                        <p class="text-black font-bold">1.95</p>
+                                    </button>
+                                    <button class="bet-button gap-2">
+                                        <img class="w-6" src="./assets/images/betting/img_bet-even.png" alt="">
+                                        <p class="text-black font-bold">1.95</p>
+                                    </button>
+                                    <button class="bet-button gap-2">
+                                        <img class="w-6" src="./assets/images/betting/img_bet-under.png" alt="">
+                                        <p class="text-black font-bold">1.95</p>
+                                    </button>
+                                    <button class="bet-button gap-2">
+                                        <img class="w-6" src="./assets/images/betting/img_bet-over.png" alt="">
+                                        <p class="text-black font-bold">1.95</p>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-span-4">
+                                <h2 class="text-lg font-bold text-body-pink">일반볼</h2>
+                                <div class="grid grid-cols-4 gap-2 pt-4">
+                                    <button class="bet-button gap-2">
+                                        <img class="w-6" src="./assets/images/betting/img_bet-odd.png" alt="">
+                                        <p class="text-black font-bold">1.95</p>
+                                    </button>
+                                    <button class="bet-button gap-2">
+                                        <img class="w-6" src="./assets/images/betting/img_bet-even.png" alt="">
+                                        <p class="text-black font-bold">1.95</p>
+                                    </button>
+                                    <button class="bet-button gap-2">
+                                        <img class="w-6" src="./assets/images/betting/img_bet-under.png" alt="">
+                                        <p class="text-black font-bold">1.95</p>
+                                    </button>
+                                    <button class="bet-button gap-2">
+                                        <img class="w-6" src="./assets/images/betting/img_bet-over.png" alt="">
+                                        <p class="text-black font-bold">1.95</p>
+                                    </button>
+                                </div>
+                                <div class="grid grid-cols-3 gap-2 pt-2">
+                                    <button class="bet-button gap-2">
+                                        <img class="w-6" src="./assets/images/betting/img_bet-big.png" alt="">
+                                        <p class="text-black font-bold">1.95</p>
+                                    </button>
+                                    <button class="bet-button gap-2">
+                                        <img class="w-6" src="./assets/images/betting/img_bet-medium.png" alt="">
+                                        <p class="text-black font-bold">1.95</p>
+                                    </button>
+                                    <button class="bet-button gap-2">
+                                        <img class="w-6" src="./assets/images/betting/img_bet-small.png" alt="">
+                                        <p class="text-black font-bold">1.95</p>
+                                    </button>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div class=" gap-4 px-4 ">
+                    <div class="col-span-2   bg-body-secondary p-4 hidden">
+                     
+                    </div>
+                    <div class="col-span-7   bg-body-secondary p-4 py-0 items-center  ">
+                        <div class="grid grid-cols-6 gap-4">
+                            <div class="col-span-6">
+                                <h2 class="text-lg font-bold text-body-pink">일반볼 조합</h2>
+                                <div class="grid grid-cols-4 gap-2 py-4">
+                                    <button class="bet-button gap-2">
+                                        <img class="w-6" src="./assets/images/betting/btn-general_under.png" alt="">
+                                        <p class="text-black font-bold">1.95</p>
+                                    </button>
+                                    <button class="bet-button gap-2">
+                                        <img class="w-6" src="./assets/images/betting/img_bet-odd.png" alt="">
+                                        <p class="text-black font-bold">1.95</p>
+                                    </button>
+                                    <button class="bet-button gap-2">
+                                        <img class="w-6" src="./assets/images/betting/btn-general_under.png" alt="">
+                                        <p class="text-black font-bold">1.95</p>
+                                    </button>
+                                    <button class="bet-button gap-2">
+                                        <img class="w-6" src="./assets/images/betting//btn-general_over.png" alt="">
+                                        <p class="text-black font-bold">1.95</p>
+                                    </button>
+                                </div>
+                            </div>
+
+                
+                            </div>
+                    </div>
+                </div>
+                <div class=" gap-4 px-4 ">
+                    <div class="col-span-2   bg-body-secondary p-4 hidden">
+                
+                    </div>
+                    <div class="col-span-7   bg-body-secondary p-4 py-0 items-center  ">
+                        <div class="grid grid-cols-6 gap-4">
+                            <div class="col-span-6">
+                                <h2 class="text-lg font-bold text-body-pink">파워볼 조합</h2>
+                                <div class="grid grid-cols-4 gap-2 py-4">
+                                    <button class="bet-button gap-2">
+                                        <img class="w-6" src="./assets/images/betting/btn-general_under.png" alt="">
+                                        <p class="text-black font-bold">1.95</p>
+                                    </button>
+                                    <button class="bet-button gap-2">
+                                        <img class="w-6" src="./assets/images/betting/img_bet-odd.png" alt="">
+                                        <p class="text-black font-bold">1.95</p>
+                                    </button>
+                                    <button class="bet-button gap-2">
+                                        <img class="w-6" src="./assets/images/betting/btn-general_under.png" alt="">
+                                        <p class="text-black font-bold">1.95</p>
+                                    </button>
+                                    <button class="bet-button gap-2">
+                                        <img class="w-6" src="./assets/images/betting//btn-general_over.png" alt="">
+                                        <p class="text-black font-bold">1.95</p>
+                                    </button>
+                                </div>
+                            </div>
+                
+                
+                        </div>
+                    </div>
+                </div>
+
+                <div class="transaction-history-table-container px-4 mt-2">
                     
+                    <table class="qna-table memo-table">
+                        <thead>
+                            <tr>
+                                <th class="text-xs">베팅회차</th>
+                                <th class="text-xs">베팅내역</th>
+                                <th class="text-xs">적중유무</th>
+                                <th class="text-xs">베팅시간</th>
+                                <th class="text-xs">베팅금</th>
+                                <th class="text-xs">배당</th>
+                                <th class="text-xs">적중금</th>
+                    
+                            </tr>
+                        </thead>
+
+                
+                    </table>
+
                 </div>
-                <div class="bg-body-primary h-96 flex items-center justify-center text-white">
-                    <h2>베팅 내역이 없습니다.</h2>
-                </div>
+
             </div>
 
+         
 
-
-
-    <!-- Customer Service Section -->
-    <section class="container">
-        <div class="cs-wrapper">
-            <div class="grid grid-cols-1  px-4">
-                <div class="px-4 p-2 flex items-center gap-2 border-r border-dashed border-slate-700/50">
-                    <div class="wrapper bg-body-pink w-12 p-2 rounded">
-                        <img src="./assets/images/svg/footer-1.svg" alt="">
-                    </div>
-                    <div class="text-white">
-                        <h2 class="text-lg">365 결제문의</h2>
-                        <h2 class="font-bold text-lg">
-                            <span>텔레그램</span>
-                            <span class="text-body-pink">SQUID CASINO</span>
-                        </h2>
-                    </div>
-                </div>
-                <div class="px-4 p-2 flex items-center gap-2 border-r border-dashed border-slate-700/50">
-                    <div class="wrapper bg-body-brown w-12 p-2 rounded">
-                        <img src="./assets/images/svg/footer-2.svg" alt="">
-                    </div>
-                    <div class="text-white">
-                        <h2 class="text-lg">365 결제문의</h2>
-                        <h2 class="font-bold text-lg">
-                            <span>텔레그램</span>
-                            <span class="text-amber-500">SQUID CASINO</span>
-                        </h2>
-                    </div>
-                </div>
-                <div class="px-4 p-2 flex items-center gap-2 border-r border-dashed border-slate-700/50">
-                    <div class="wrapper bg-body-green w-12 p-2 rounded">
-                        <img src="./assets/images/svg/footer-3.svg" alt="">
-                    </div>
-                    <div class="text-white">
-                        <h2 class="text-lg">궁금한 점이 있으세요?</h2>
-                        <h2 class="font-bold text-lg">
-
-                            <span class="text-green-500">자주 묻는 질문</span>
-                        </h2>
-                    </div>
-                </div>
-                <div class="px-4 p-2 flex items-center gap-2 ">
-                    <div class="wrapper bg-body-blue w-12 p-2 rounded">
-                        <img src="./assets/images/svg/footer-4.svg" alt="">
-                    </div>
-                    <div class="text-white">
-                        <h2 class="text-lg">파트너 제휴문의</h2>
-                        <h2 class="font-bold text-lg">
-                            <span>텔레그램</span>
-                            <span class="text-sky-400">SQUID Partner</span>
-                        </h2>
-                    </div>
-                </div>
-            </div>
         </div>
-    </section>
 
-    <!-- Progressive Jackpot -->
-    <section class="container mx-auto mb-4">
-        <div class="jackpot-wrapper">
-            <div class="jackpot-box grid grid-cols-1">
-                <div class="jackpot-title text-center">
-                    <h2 class="text-2xl font-bold text-body-yellow ">PROGRESSIVE JACKPOT</h2>
-                    <h3 class="text-lg  text-white">화려한 애니메이션과 3D효과!! 잭팟에 도전하세요!!</h3>
-                </div>
-                <div class="m-auto flex items-center gap-2">
-                    <h2 class="currency-sign">\</h2>
-                    <div id="odometer" class="odometer">85484080</div>
-                </div>
-            </div>
-        </div>
-    </section>
+        
+ 
 
     </section>
 
@@ -1028,142 +1154,152 @@
             </div>
         </div>
     </div>
-    
 
-    <div class="sidebar bg-body-primary SIDEBAR_WRAPPER hidden">
-        <div class="flex items-center justify-between p-4 bg-body-secondary">
-            <div></div>
-            <div>
-                <img class="w-28" onclick="location.href='index.html'" src="./assets/images/logo/logo.png" alt="">
-            </div>
-            <div>
-                <img onclick="CloseSidebar()" class="w-8" src="./assets/images/icons/close.svg" alt="">
-            </div>
-        </div>
-        <div class="h-full grid grid-cols-6">
-            <div class="col-span-2 bg-body-tertiary">
-                <ul class="text-white font-bold text-sm">
-                    <li class="casino-lists-menu p-2 px-4 border-l-4  border-body-primary"onclick="location.href='powerball.html'">파워볼</li>
-                    <li class="slot-lists-menu p-2 px-4 border-l-4 border-body-primary" onclick="OpenCasinoGames()">카지노</li>
-                    <li class="p-2 px-4 border-l-4 border-body-primary" onclick="OpenSlotGames()">슬롯</li>
-                    <li class="p-2 px-4 border-l-4 border-body-primary">스포츠</li>
-                    <li class="p-2 px-4 border-l-4 border-body-primary" onclick="location.href='announcement.html'">공지사항
-                    </li>
-                    <li class="p-2 px-4 border-l-4 border-body-pink text-body-pink" onclick="location.href='betting-history.html'">베팅내역
-                    </li>
-                    <li class="p-2 px-4 border-l-4 border-body-primary" onclick="location.href='deposit.html'">입금신청</li>
-                    <li class="p-2 px-4 border-l-4 border-body-primary" onclick="location.href='withdrawal.html'">출금신청</li>
-                    <li class="p-2 px-4 border-l-4 border-body-primary" onclick="location.href='customer-service.html'">고객센터
-                    </li>
-                </ul>
-            </div>
-    
-            <div class="col-span-4 px-2">
-                
-            </div>
-    
-        </div>
-    </div>
-
-    <div class="fixed  top-0 w-full h-full bg-body-primary z-30 account-bar hidden" style="right: 0px;">
-        <!-- ACCOUNT BAR HEADER -->
-        <div
-            class="grid grid-cols-8 items-center justify-between w-full p-2 py-4 bg-body-secondary border-b border-body-pink">
-            <div class="col-span-7">
-                <div class="flex items-center gap-4 text-white">
-                    <label class="font-semibold text-sm flex items-center gap-1">
-                        <span class="text-body-pink ">LV.1</span>
-                        <span>홍길동</span>
-                        <span> 님,</span>
-                    </label>
-                    <label class="font-semibold text-sm flex items-center gap-1">
-                        <img class="w-4" src="./assets/images/icons/envelope.svg" alt="">
-                        <span>쪽지</span>
-                        <span class="text-body-pink ">0</span>
-                        <span>건</span>
-                    </label>
+        <div class="sidebar bg-body-primary SIDEBAR_WRAPPER hidden">
+            <div class="flex items-center justify-between p-4 bg-body-secondary">
+                <div></div>
+                <div>
+                    <img class="w-28" onclick="location.href='index.html'" src="./assets/images/logo/logo.png" alt="">
+                </div>
+                <div>
+                    <img onclick="CloseSidebar()" class="w-8" src="./assets/images/icons/close.svg" alt="">
                 </div>
             </div>
-            <div class="px-2 col-span-1 cursor-pointer" onclick="CloseAccountBar()">
-                <img class="w-8 " src="./assets/images/icons/close.svg" alt="">
-            </div>
-        </div>
-    
-        <!-- ACCOUNT BAR HEADER -->
-        <div class="grid grid-cols-8 items-center bg-body-secondary border-b border-body-pink/10 mb-4">
-            <div class="col-span-5 p-4  text-white">
-                <label class="text-sm font-semibold">보유머니</label>
-                <p class="text-body-pink font-semibold text-lg">100,000,000 원</p>
-            </div>
-            <div class="col-span-3 text-right px-4 py-2 pl-0 text-white text-xs font-semibold">
-                <div class="text-left  py-2 gap-1 border-b border-body-pink/20">
-                    <label class="">카지노머니 :</label>
-                    <div class="flex items-center justify-start gap-1">
-                        <p class="text-body-pink ">100,000,000 <span class="text-white">원</span></p>
-                        <img class="w-6" src="./assets/images/icons/exchange.svg" alt="">
+            <div class="h-full grid grid-cols-6">
+                <div class="col-span-2 bg-body-tertiary">
+                    <ul class="text-white font-bold text-sm">
+                        <li class="casino-lists-menu p-2 px-4 border-l-4  border-body-pink text-body-pink"
+                            onclick="location.href='powerball.html'"onclick="location.href='powerball.html'">파워볼</li>
+                        <li class="slot-lists-menu p-2 px-4 border-l-4 border-body-primary" onclick="OpenCasinoGames()">카지노</li>
+                        <li class="p-2 px-4 border-l-4 border-body-primary"  onclick="OpenSlotGames()">슬롯</li>
+                        <li class="p-2 px-4 border-l-4 border-body-primary">스포츠</li>
+                        <li class="p-2 px-4 border-l-4 border-body-primary" onclick="location.href='announcement.html'">공지사항
+                        </li>
+                        <li class="p-2 px-4 border-l-4 border-body-primary" onclick="location.href='betting-history.html'">베팅내역
+                        </li>
+                        <li class="p-2 px-4 border-l-4 border-body-primary" onclick="location.href='deposit.html'">입금신청</li>
+                        <li class="p-2 px-4 border-l-4 border-body-primary" onclick="location.href='withdrawal.html'">출금신청</li>
+                        <li class="p-2 px-4 border-l-4 border-body-primary" onclick="location.href='customer-service.html'">고객센터
+                        </li>
+                    </ul>
+                </div>
+        
+                <div class="col-span-4 px-2">
+                    <div class="casino-sidebar-content">
+                        <div class="flex justify-between items-center w-full border-b border-body-pink py-2 px-2">
+                            <h2 class="text-body-pink font-bold">파워볼</h2>
+                            <img class="w-8" src="./assets/new_images/icons/down.svg" alt="">
+                        </div>
+                        <ul class="text-white text-sm font-semibold">
+                            <li class="p-2" onclick="GoToCasino()">EOS 파워볼 3분</li>
+                            <li class="p-2" onclick="GoToCasino()">EOS 파워볼 5분</li>
+                            <li class="p-2" onclick="GoToCasino()">PBG 파워볼</li>
+                            <li class="p-2" onclick="GoToCasino()">코인 파워볼</li>
+                            <li class="p-2" onclick="GoToCasino()">동행 파워볼</li>
+                            <li class="p-2" onclick="GoToCasino()">키노 사다리</li>
+                        </ul>
                     </div>
-    
                 </div>
-    
-                <div class="text-left  py-2 gap-1">
-                    <label class="">포인트 :</label>
-                    <div class="flex items-center justify-start gap-1">
-                        <p class="text-body-pink  ">100,000,000 <span class="text-white">P</span></p>
-                        <img class="w-6" src="./assets/images/icons/exchange.svg" alt="">
+        
+            </div>
+        </div>
+
+            <div class="fixed  top-0 w-full h-full bg-body-primary z-30 account-bar hidden" style="right: 0px;">
+                <!-- ACCOUNT BAR HEADER -->
+                <div
+                    class="grid grid-cols-8 items-center justify-between w-full p-2 py-4 bg-body-secondary border-b border-body-pink">
+                    <div class="col-span-7">
+                        <div class="flex items-center gap-4 text-white">
+                            <label class="font-semibold text-sm flex items-center gap-1">
+                                <span class="text-body-pink ">LV.1</span>
+                                <span>홍길동</span>
+                                <span> 님,</span>
+                            </label>
+                            <label class="font-semibold text-sm flex items-center gap-1">
+                                <img class="w-4" src="./assets/images/icons/envelope.svg" alt="">
+                                <span>쪽지</span>
+                                <span class="text-body-pink ">0</span>
+                                <span>건</span>
+                            </label>
+                        </div>
                     </div>
-    
+                    <div class="px-2 col-span-1 cursor-pointer" onclick="CloseAccountBar()">
+                        <img class="w-8 " src="./assets/images/icons/close.svg" alt="">
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="grid grid-cols-3 gap-2 text-white text-xs bg-body-secondary border-y border-body-pink/10 py-4 mb-4">
-            <div class="py-2 text-center" onclick="location.href='deposit.html'">
-                <img class="w-10 h-10 mb-2 mx-auto" src="./assets/images/icons/deposit.svg" alt="">
-                <p>충전신청</p>
-            </div>
-            <div class="py-2 text-center" onclick="location.href='withdrawal.html'">
-                <img class="w-10 h-10 mb-2 mx-auto" src="./assets/images/icons/withdraw.svg" alt="">
-                <p>환전신청</p>
-            </div>
-            <div class="py-2 text-center" onclick="location.href='point-history.html'">
-                <img class="w-8 h-10 mb-2 mx-auto" src="./assets/images/icons/convert.svg" alt="">
-                <p>포인트전환내역</p>
-            </div>
-            <div class="py-2 text-center">
-                <img class="w-10 h-10 mb-2 mx-auto" src="./assets/images/icons/account-inquiry.svg" alt="">
-                <p>빠른계좌문의</p>
-            </div>
-    
-            <div class="py-2 text-center" onclick="location.href='customer-service.html'">
-                <img class="w-10 h-10 mb-2 mx-auto" src="./assets/images/icons/customer-service.svg" alt="">
-                <p>고객센터</p>
-            </div>
-        </div>
-        <div class="grid grid-cols-1 gap-4 text-white text-xs bg-body-secondary border-y border-body-pink/10 py-4 mb-4">
-    
-            <div class="px-2 text-center flex items-center gap-2" onclick="location.href='betting-history.html'">
-                <img class="w-6 h-6  " src="./assets/images/icons/betting-history.svg" alt="">
-                <p class="text-sm font-semibold">베팅내역</p>
-            </div>
-            <div class="px-2 text-center flex items-center gap-2" onclick="location.href='event.html'">
-                <img class="w-6 h-5  " src="./assets/images/icons/speaker.svg" alt="">
-                <p class="text-sm font-semibold">공지사항</p>
-            </div>
-        </div>
-        <div class="p-1">
-            <div class=" border border-body-pink/10 rounded" style="padding : 2px">
-                <div class="text-center">
-                    <button class="submit-deposit w-full">
-                        충전신청
-                    </button>
+            
+                <!-- ACCOUNT BAR HEADER -->
+                <div class="grid grid-cols-8 items-center bg-body-secondary border-b border-body-pink/10 mb-4">
+                    <div class="col-span-5 p-4  text-white">
+                        <label class="text-sm font-semibold">보유머니</label>
+                        <p class="text-body-pink font-semibold text-lg">100,000,000 원</p>
+                    </div>
+                    <div class="col-span-3 text-right px-4 py-2 pl-0 text-white text-xs font-semibold">
+                        <div class="text-left  py-2 gap-1 border-b border-body-pink/20">
+                            <label class="">카지노머니 :</label>
+                            <div class="flex items-center justify-start gap-1">
+                                <p class="text-body-pink ">100,000,000 <span class="text-white">원</span></p>
+                                <img class="w-6" src="./assets/images/icons/exchange.svg" alt="">
+                            </div>
+            
+                        </div>
+            
+                        <div class="text-left  py-2 gap-1">
+                            <label class="">포인트 :</label>
+                            <div class="flex items-center justify-start gap-1">
+                                <p class="text-body-pink  ">100,000,000 <span class="text-white">P</span></p>
+                                <img class="w-6" src="./assets/images/icons/exchange.svg" alt="">
+                            </div>
+            
+                        </div>
+                    </div>
                 </div>
-    
+                <div class="grid grid-cols-3 gap-2 text-white text-xs bg-body-secondary border-y border-body-pink/10 py-4 mb-4">
+                    <div class="py-2 text-center" onclick="location.href='deposit.html'">
+                        <img class="w-10 h-10 mb-2 mx-auto" src="./assets/images/icons/deposit.svg" alt="">
+                        <p>충전신청</p>
+                    </div>
+                    <div class="py-2 text-center" onclick="location.href='withdrawal.html'">
+                        <img class="w-10 h-10 mb-2 mx-auto" src="./assets/images/icons/withdraw.svg" alt="">
+                        <p>환전신청</p>
+                    </div>
+                    <div class="py-2 text-center" onclick="location.href='point-history.html'">
+                        <img class="w-8 h-10 mb-2 mx-auto" src="./assets/images/icons/convert.svg" alt="">
+                        <p>포인트전환내역</p>
+                    </div>
+                    <div class="py-2 text-center">
+                        <img class="w-10 h-10 mb-2 mx-auto" src="./assets/images/icons/account-inquiry.svg" alt="">
+                        <p>빠른계좌문의</p>
+                    </div>
+            
+                    <div class="py-2 text-center" onclick="location.href='customer-service.html'">
+                        <img class="w-10 h-10 mb-2 mx-auto" src="./assets/images/icons/customer-service.svg" alt="">
+                        <p>고객센터</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 gap-4 text-white text-xs bg-body-secondary border-y border-body-pink/10 py-4 mb-4">
+            
+                    <div class="px-2 text-center flex items-center gap-2" onclick="location.href='betting-history.html'">
+                        <img class="w-6 h-6  " src="./assets/images/icons/betting-history.svg" alt="">
+                        <p class="text-sm font-semibold">베팅내역</p>
+                    </div>
+                    <div class="px-2 text-center flex items-center gap-2" onclick="location.href='event.html'">
+                        <img class="w-6 h-5  " src="./assets/images/icons/speaker.svg" alt="">
+                        <p class="text-sm font-semibold">공지사항</p>
+                    </div>
+                </div>
+                <div class="p-1">
+                    <div class=" border border-body-pink/10 rounded" style="padding : 2px">
+                        <div class="text-center">
+                            <button class="submit-deposit w-full">
+                                충전신청
+                            </button>
+                        </div>
+            
+                    </div>
+                </div>
+            
             </div>
-        </div>
-    
-    </div>
-    
-
-
 
 
 

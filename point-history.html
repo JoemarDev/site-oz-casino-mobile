@@ -34,10 +34,10 @@
                 <img onclick="OpenSideBar()" class="w-8" src="./assets/images/icons/menu.svg" alt="">
             </div>
             <div>
-                <img class="w-28" src="./assets/images/logo/logo.png" alt="">
+                <img class="w-28" onclick="location.href='index.html'" src="./assets/images/logo/logo.png" alt="">
             </div>
             <div>
-                <img class="w-8" src="./assets/images/icons/account.svg" alt="">
+                <img onclick="OpenAccountBar()" class="w-8" src="./assets/images/icons/account.svg" alt="">
             </div>
         </div>
     </section>
@@ -64,85 +64,67 @@
 
                 <div class="p-5 rounded bg-body-primary text-white border border-body-secondary mb-2">
                     <div class="flex items-center gap-1">
-                        <img class="w-8" src="./assets/images/icons/warning.svg" alt="">
-                        <h2 class="text-yellow font-bold text-xl mb-2">필독/주의사항</h2>
+                
+                        <h2 class="text-body-pink font-semibold text-normal mb-2">포인트전환 내역</h2>
                     </div>
-
-                    <div class="pl-9  leading-8 font-normal">
-                        <p class="font-normal">① 5,000 포인트 부터 전환 가능합니다.</p>
-                        <p class="font-normal">② 보유머니로 전환 하시고 배팅 가능합니다.</p>
-                    
+                
+                    <div class="pl-0  leading-8 text-xs">
+                        <p class="font-normal"><span class="text-body-pink">①</span> 5,000 포인트 부터 전환 가능합니다.</p>
+                        <p class="font-normal"><span class="text-body-pink">②</span> 보유머니로 전환 하시고 배팅 가능합니다.</p>
                     </div>
                 </div>
 
+                <div class="p-5 rounded bg-body-primary text-white border border-body-secondary mb-2 font-sm">
+                    <div class="transaction-inner-section" style="border: none;">
+                        <p class="title m-0">◎포인트전환 내역</p>
+                    </div>
 
-
-
-         
-                <div class="transaction-history-table-container">
-                    <h3>◎충전신청내역</h3>
-
-                <table class="transaction-history-table text-center">
-                    <thead>
-                        <tr>
-                            <th>전환시간</th>
-                            <th>내용</th>
-                            <th>금액</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>2022-10-11 05:15:48 </td>
-                            <td><span class="text-body-pink">[포인트] 보유머니로 전환</span></td>
-                            <td><strong class="white">5,000 원</strong></td>
-                        </tr>
-                        <tr>
-                            <td>2022-10-11 05:15:48 </td>
-                            <td><span class="text-body-pink">[포인트] 보유머니로 전환</span></td>
-                            <td><strong class="white">5,000 원</strong></td>
-                        </tr>
-                        <tr>
-                            <td>2022-10-11 05:15:48 </td>
-                            <td><span class="text-body-pink">[포인트] 보유머니로 전환</span></td>
-                            <td><strong class="white">5,000 원</strong></td>
-                        </tr>
-                        <tr>
-                            <td>2022-10-11 05:15:48 </td>
-                            <td><span class="text-body-pink">[포인트] 보유머니로 전환</span></td>
-                            <td><strong class="white">5,000 원</strong></td>
-                        </tr>
-                        <tr>
-                            <td>2022-10-11 05:15:48 </td>
-                            <td><span class="text-body-pink">[포인트] 보유머니로 전환</span></td>
-                            <td><strong class="white">5,000 원</strong></td>
-                        </tr>
-                        <tr>
-                            <td>2022-10-11 05:15:48 </td>
-                            <td><span class="text-body-pink">[포인트] 보유머니로 전환</span></td>
-                            <td><strong class="white">5,000 원</strong></td>
-                        </tr>
-                        <tr>
-                            <td>2022-10-11 05:15:48 </td>
-                            <td><span class="text-body-pink">[포인트] 보유머니로 전환</span></td>
-                            <td><strong class="white">5,000 원</strong></td>
-                        </tr>
-                        <tr>
-                            <td>2022-10-11 05:15:48 </td>
-                            <td><span class="text-body-pink">[포인트] 보유머니로 전환</span></td>
-                            <td><strong class="white">5,000 원</strong></td>
-                        </tr>
-                        <tr>
-                            <td>2022-10-11 05:15:48 </td>
-                            <td><span class="text-body-pink">[포인트] 보유머니로 전환</span></td>
-                            <td><strong class="white">5,000 원</strong></td>
-                        </tr>
-                        <tr>
-                            <td>2022-10-11 05:15:48 </td>
-                            <td><span class="text-body-pink">[포인트] 보유머니로 전환</span></td>
-                            <td><strong class="white">5,000 원</strong></td>
-                        </tr>
-                    </tbody>
-                </table>
+                    <table class="trans-history-table text-center">
+                        <thead>
+                            <tr class="h-8">
+                                <th style="width: 100px">전환시간</th>
+                                <th>내용</th>
+                                <th>금액</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="h-8">
+                                <td>05-11 05:15</td>
+                                <td class="text-body-pink">[포인트] 보유머니로 전환</td>
+                                <td>5,000 원</td>
+                            </tr>
+                            <tr class="h-8">
+                                <td>05-11 05:15</td>
+                                <td class="text-body-pink">[포인트] 보유머니로 전환</td>
+                                <td>5,000 원</td>
+                            </tr>
+                            <tr class="h-8">
+                                <td>05-11 05:15</td>
+                                <td class="text-body-pink">[포인트] 보유머니로 전환</td>
+                                <td>5,000 원</td>
+                            </tr>
+                            <tr class="h-8">
+                                <td>05-11 05:15</td>
+                                <td class="text-body-pink">[포인트] 보유머니로 전환</td>
+                                <td>5,000 원</td>
+                            </tr>
+                            <tr class="h-8">
+                                <td>05-11 05:15</td>
+                                <td class="text-body-pink">[포인트] 보유머니로 전환</td>
+                                <td>5,000 원</td>
+                            </tr>
+                            <tr class="h-8">
+                                <td>05-11 05:15</td>
+                                <td class="text-body-pink">[포인트] 보유머니로 전환</td>
+                                <td>5,000 원</td>
+                            </tr>
+                            <tr class="h-8">
+                                <td>05-11 05:15</td>
+                                <td class="text-body-pink">[포인트] 보유머니로 전환</td>
+                                <td>5,000 원</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
 
                 <ul class="pagination">
@@ -429,6 +411,630 @@
 
     </div>
     <!-- Footer Section -->
+
+
+        <!-- Casino Game Section -->
+    <div class="hidden CASINO_GAME_WRAPPER">
+        <div class="h-screen py-10  w-full fixed left-0 top-0 bg-black/80 z-10 flex items-center justify-center">
+            <div class="app-dialog  container mx-auto bg-body-primary p-5 border-8 border-body-secondary">
+                <div class="header flex justify-between w-full p-4 items-center mb-5">
+                    <h2 class="text-body-pink font-bold text-2xl">라이브카지노</h2>
+                    <img onclick="CloseCasinoGames()" class="cursor-pointer w-12 "
+                        src="./assets/images/svg/close.svg">
+                </div>
+                <div class="grid grid-cols-3 gap-4 px-4 overflow-y-scroll custom-scroll " style="max-height: 80vh;">
+                    <div class="dialog-game-box">
+                        <img src="./assets/images/casino/live-evolution.jpg" alt="">
+                        <div class="dialog-inner-box bg-black/50 flex items-center justify-center">
+                            <div class="text-center">
+                                <img class="w-6 mx-auto mb-2" src="./assets/images/svg/icon_card.svg" alt="">
+                                <h2 class="title">에볼루션</h2>
+                                <button class="button-main" onclick="OpenLoginDialog()">게임시작</button>
+                            </div>
+                          
+                        </div>
+                    </div>
+                    <div class="dialog-game-box">
+                        <img src="./assets/images/casino/live-ag.jpg" alt="">
+                        <div class="dialog-inner-box bg-black/50 flex items-center justify-center">
+                            <div class="text-center">
+                                <img class="w-6 mx-auto mb-2" src="./assets/images/svg/icon_card.svg" alt="">
+                                <h2 class="title">아시아게이밍</h2>
+                                <button class="button-main" onclick="OpenLoginDialog()">게임시작</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dialog-game-box">
+                        <img src="./assets/images/casino/live-microgaming.jpg" alt="">
+                        <div class="dialog-inner-box bg-black/50 flex items-center justify-center">
+                            <div class="text-center">
+                                <img class="w-6 mx-auto mb-2" src="./assets/images/svg/icon_card.svg" alt="">
+                                <h2 class="title">마이크로게이밍</h2>
+                                <button class="button-main" onclick="OpenLoginDialog()">게임시작</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dialog-game-box">
+                        <img src="./assets/images/casino/live-pragmatic.jpg" alt="">
+                        <div class="dialog-inner-box bg-black/50 flex items-center justify-center">
+                            <div class="text-center">
+                                <img class="w-6 mx-auto mb-2" src="./assets/images/svg/icon_card.svg" alt="">
+                                <h2 class="title">프라그마틱플레이 라이브</h2>
+                                <button class="button-main" onclick="OpenLoginDialog()">게임시작</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dialog-game-box">
+                        <img src="./assets/images/casino/live-dowin.jpg" alt="">
+                        <div class="dialog-inner-box bg-black/50 flex items-center justify-center">
+                            <div class="text-center">
+                                <img class="w-6 mx-auto mb-2" src="./assets/images/svg/icon_card.svg" alt="">
+                                <h2 class="title">두윈</h2>
+                                <button class="button-main" onclick="OpenLoginDialog()">게임시작</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dialog-game-box">
+                        <img src="./assets/images/casino/live-dreamgaming.jpg" alt="">
+                        <div class="dialog-inner-box bg-black/50 flex items-center justify-center">
+                            <div class="text-center">
+                                <img class="w-6 mx-auto mb-2" src="./assets/images/svg/icon_card.svg" alt="">
+                                <h2 class="title">드림게임</h2>
+                                <button class="button-main" onclick="OpenLoginDialog()">게임시작</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dialog-game-box">
+                        <img src="./assets/images/casino/live-wm.jpg" alt="">
+                        <div class="dialog-inner-box bg-black/50 flex items-center justify-center">
+                            <div class="text-center">
+                                <img class="w-6 mx-auto mb-2" src="./assets/images/svg/icon_card.svg" alt="">
+                                <h2 class="title">WM</h2>
+                                <button class="button-main" onclick="OpenLoginDialog()">게임시작</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dialog-game-box">
+                        <img src="./assets/images/casino/live-skywind.jpg" alt="">
+                        <div class="dialog-inner-box bg-black/50 flex items-center justify-center">
+                            <div class="text-center">
+                                <img class="w-6 mx-auto mb-2" src="./assets/images/svg/icon_card.svg" alt="">
+                                <h2 class="title">스카이윈드</h2>
+                                <button class="button-main" onclick="OpenLoginDialog()">게임시작</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dialog-game-box">
+                        <img src="./assets/images/casino/live-betgamestv.jpg" alt="">
+                        <div class="dialog-inner-box bg-black/50 flex items-center justify-center">
+                            <div class="text-center">
+                                <img class="w-6 mx-auto mb-2" src="./assets/images/svg/icon_card.svg" alt="">
+                                <h2 class="title">벳게임즈티비</h2>
+                                <button class="button-main" onclick="OpenLoginDialog()">게임시작</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Slot Game Casino -->
+    <div class="hidden SLOT_GAME_WRAPPER">
+        <div class="h-screen py-10  w-full fixed left-0 top-0 bg-black/80 z-10 flex items-center justify-center">
+            <div class="app-dialog  container mx-auto bg-body-primary p-5 border-8 border-body-secondary">
+                <div class="header flex justify-between w-full p-4 items-center mb-5">
+                    <h2 class="text-body-pink font-bold text-2xl">슬롯</h2>
+                    <img onclick="CloseSlotGames()" class="cursor-pointer w-12 " src="./assets/images/svg/close.svg">
+                </div>
+                <div class="grid grid-cols-3 gap-4 px-4 overflow-y-scroll custom-scroll " style="max-height: 80vh;">
+                    <div class="dialog-game-box">
+                        <img src="./assets/images/slots/1.jpg" alt="">
+                        <div class="dialog-inner-box bg-black/50 flex items-center justify-center">
+                            <div class="text-center">
+                                <img class="w-6 mx-auto mb-2" src="./assets/images/slots/1.jpg" alt="">
+                                <h2 class="title">프라그마틱</h2>
+                                <button class="button-main" onclick="OpenLoginDialog()">게임시작</button>
+                            </div>
+    
+                        </div>
+                    </div>
+                    <div class="dialog-game-box">
+                        <img src="./assets/images/slots/2.jpg" alt="">
+                        <div class="dialog-inner-box bg-black/50 flex items-center justify-center">
+                            <div class="text-center">
+                                <img class="w-6 mx-auto mb-2" src="./assets/images/slots/2.jpg" alt="">
+                                <h2 class="title">마이크로게이밍</h2>
+                                <button class="button-main" onclick="OpenLoginDialog()">게임시작</button>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    <div class="dialog-game-box">
+                        <img src="./assets/images/slots/3.jpg" alt="">
+                        <div class="dialog-inner-box bg-black/50 flex items-center justify-center">
+                            <div class="text-center">
+                                <img class="w-6 mx-auto mb-2" src="./assets/images/slots/3.jpg" alt="">
+                                <h2 class="title">CQ9</h2>
+                                <button class="button-main" onclick="OpenLoginDialog()">게임시작</button>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    <div class="dialog-game-box">
+                        <img src="./assets/images/slots/4.jpg" alt="">
+                        <div class="dialog-inner-box bg-black/50 flex items-center justify-center">
+                            <div class="text-center">
+                                <img class="w-6 mx-auto mb-2" src="./assets/images/slots/4.jpg" alt="">
+                                <h2 class="title">에보플레이</h2>
+                                <button class="button-main" onclick="OpenLoginDialog()">게임시작</button>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    <div class="dialog-game-box">
+                        <img src="./assets/images/slots/5.jpg" alt="">
+                        <div class="dialog-inner-box bg-black/50 flex items-center justify-center">
+                            <div class="text-center">
+                                <img class="w-6 mx-auto mb-2" src="./assets/images/slots/5.jpg" alt="">
+                                <h2 class="title">부운고</h2>
+                                <button class="button-main" onclick="OpenLoginDialog()">게임시작</button>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    <div class="dialog-game-box">
+                        <img src="./assets/images/slots/6.jpg" alt="">
+                        <div class="dialog-inner-box bg-black/50 flex items-center justify-center">
+                            <div class="text-center">
+                                <img class="w-6 mx-auto mb-2" src="./assets/images/slots/6.jpg" alt="">
+                                <h2 class="title">와즈단</h2>
+                                <button class="button-main" onclick="OpenLoginDialog()">게임시작</button>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    <div class="dialog-game-box">
+                        <img src="./assets/images/slots/7.jpg" alt="">
+                        <div class="dialog-inner-box bg-black/50 flex items-center justify-center">
+                            <div class="text-center">
+                                <img class="w-6 mx-auto mb-2" src="./assets/images/slots/7.jpg" alt="">
+                                <h2 class="title">플레이슨</h2>
+                                <button class="button-main" onclick="OpenLoginDialog()">게임시작</button>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    <div class="dialog-game-box">
+                        <img src="./assets/images/slots/8.jpg" alt="">
+                        <div class="dialog-inner-box bg-black/50 flex items-center justify-center">
+                            <div class="text-center">
+                                <img class="w-6 mx-auto mb-2" src="./assets/images/slots/8.jpg" alt="">
+                                <h2 class="title">플레이스타</h2>
+                                <button class="button-main" onclick="OpenLoginDialog()">게임시작</button>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    <div class="dialog-game-box">
+                        <img src="./assets/images/slots/9.jpg" alt="">
+                        <div class="dialog-inner-box bg-black/50 flex items-center justify-center">
+                            <div class="text-center">
+                                <img class="w-6 mx-auto mb-2" src="./assets/images/slots/9.jpg" alt="">
+                                <h2 class="title">하바네로</h2>
+                                <button class="button-main" onclick="OpenLoginDialog()">게임시작</button>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    <div class="dialog-game-box">
+                        <img src="./assets/images/slots/10.jpg" alt="">
+                        <div class="dialog-inner-box bg-black/50 flex items-center justify-center">
+                            <div class="text-center">
+                                <img class="w-6 mx-auto mb-2" src="./assets/images/slots/10.jpg" alt="">
+                                <h2 class="title">릴렉스게이밍</h2>
+                                <button class="button-main" onclick="OpenLoginDialog()">게임시작</button>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    <div class="dialog-game-box">
+                        <img src="./assets/images/slots/11.jpg" alt="">
+                        <div class="dialog-inner-box bg-black/50 flex items-center justify-center">
+                            <div class="text-center">
+                                <img class="w-6 mx-auto mb-2" src="./assets/images/slots/11.jpg" alt="">
+                                <h2 class="title">트리플 프로핏 게이밍</h2>
+                                <button class="button-main" onclick="OpenLoginDialog()">게임시작</button>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    <div class="dialog-game-box">
+                        <img src="./assets/images/slots/12.jpg" alt="">
+                        <div class="dialog-inner-box bg-black/50 flex items-center justify-center">
+                            <div class="text-center">
+                                <img class="w-6 mx-auto mb-2" src="./assets/images/slots/12.jpg" alt="">
+                                <h2 class="title">게임아트</h2>
+                                <button class="button-main" onclick="OpenLoginDialog()">게임시작</button>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    <div class="dialog-game-box">
+                        <img src="./assets/images/slots/13.jpg" alt="">
+                        <div class="dialog-inner-box bg-black/50 flex items-center justify-center">
+                            <div class="text-center">
+                                <img class="w-6 mx-auto mb-2" src="./assets/images/slots/13.jpg" alt="">
+                                <h2 class="title">블루프린트 게이밍</h2>
+                                <button class="button-main" onclick="OpenLoginDialog()">게임시작</button>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    <div class="dialog-game-box">
+                        <img src="./assets/images/slots/14.jpg" alt="">
+                        <div class="dialog-inner-box bg-black/50 flex items-center justify-center">
+                            <div class="text-center">
+                                <img class="w-6 mx-auto mb-2" src="./assets/images/slots/14.jpg" alt="">
+                                <h2 class="title">넷엔트</h2>
+                                <button class="button-main" onclick="OpenLoginDialog()">게임시작</button>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    <div class="dialog-game-box">
+                        <img src="./assets/images/slots/15.jpg" alt="">
+                        <div class="dialog-inner-box bg-black/50 flex items-center justify-center">
+                            <div class="text-center">
+                                <img class="w-6 mx-auto mb-2" src="./assets/images/slots/15.jpg" alt="">
+                                <h2 class="title">레드타이거</h2>
+                                <button class="button-main" onclick="OpenLoginDialog()">게임시작</button>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    <div class="dialog-game-box">
+                        <img src="./assets/images/slots/16.jpg" alt="">
+                        <div class="dialog-inner-box bg-black/50 flex items-center justify-center">
+                            <div class="text-center">
+                                <img class="w-6 mx-auto mb-2" src="./assets/images/slots/16.jpg" alt="">
+                                <h2 class="title">썬더킥</h2>
+                                <button class="button-main" onclick="OpenLoginDialog()">게임시작</button>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    <div class="dialog-game-box">
+                        <img src="./assets/images/slots/17.jpg" alt="">
+                        <div class="dialog-inner-box bg-black/50 flex items-center justify-center">
+                            <div class="text-center">
+                                <img class="w-6 mx-auto mb-2" src="./assets/images/slots/17.jpg" alt="">
+                                <h2 class="title">노리밋 시티</h2>
+                                <button class="button-main" onclick="OpenLoginDialog()">게임시작</button>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    <div class="dialog-game-box">
+                        <img src="./assets/images/slots/18.jpg" alt="">
+                        <div class="dialog-inner-box bg-black/50 flex items-center justify-center">
+                            <div class="text-center">
+                                <img class="w-6 mx-auto mb-2" src="./assets/images/slots/18.jpg" alt="">
+                                <h2 class="title">Mobilots</h2>
+                                <button class="button-main" onclick="OpenLoginDialog()">게임시작</button>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    <div class="dialog-game-box">
+                        <img src="./assets/images/slots/19.jpg" alt="">
+                        <div class="dialog-inner-box bg-black/50 flex items-center justify-center">
+                            <div class="text-center">
+                                <img class="w-6 mx-auto mb-2" src="./assets/images/slots/19.jpg" alt="">
+                                <h2 class="title">플레이펄스</h2>
+                                <button class="button-main" onclick="OpenLoginDialog()">게임시작</button>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    <div class="dialog-game-box">
+                        <img src="./assets/images/slots/20.jpg" alt="">
+                        <div class="dialog-inner-box bg-black/50 flex items-center justify-center">
+                            <div class="text-center">
+                                <img class="w-6 mx-auto mb-2" src="./assets/images/slots/20.jpg" alt="">
+                                <h2 class="title">드라군 소프트</h2>
+                                <button class="button-main" onclick="OpenLoginDialog()">게임시작</button>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    <div class="dialog-game-box">
+                        <img src="./assets/images/slots/21.jpg" alt="">
+                        <div class="dialog-inner-box bg-black/50 flex items-center justify-center">
+                            <div class="text-center">
+                                <img class="w-6 mx-auto mb-2" src="./assets/images/slots/21.jpg" alt="">
+                                <h2 class="title">1x2 게이밍</h2>
+                                <button class="button-main" onclick="OpenLoginDialog()">게임시작</button>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    <div class="dialog-game-box">
+                        <img src="./assets/images/slots/22.jpg" alt="">
+                        <div class="dialog-inner-box bg-black/50 flex items-center justify-center">
+                            <div class="text-center">
+                                <img class="w-6 mx-auto mb-2" src="./assets/images/slots/22.jpg" alt="">
+                                <h2 class="title">Elk Studios</h2>
+                                <button class="button-main" onclick="OpenLoginDialog()">게임시작</button>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    <div class="dialog-game-box">
+                        <img src="./assets/images/slots/23.jpg" alt="">
+                        <div class="dialog-inner-box bg-black/50 flex items-center justify-center">
+                            <div class="text-center">
+                                <img class="w-6 mx-auto mb-2" src="./assets/images/slots/23.jpg" alt="">
+                                <h2 class="title">PG 소프트</h2>
+                                <button class="button-main" onclick="OpenLoginDialog()">게임시작</button>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    <div class="dialog-game-box">
+                        <img src="./assets/images/slots/24.jpg" alt="">
+                        <div class="dialog-inner-box bg-black/50 flex items-center justify-center">
+                            <div class="text-center">
+                                <img class="w-6 mx-auto mb-2" src="./assets/images/slots/24.jpg" alt="">
+                                <h2 class="title">스타게임</h2>
+                                <button class="button-main" onclick="OpenLoginDialog()">게임시작</button>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    <div class="dialog-game-box">
+                        <img src="./assets/images/slots/25.jpg" alt="">
+                        <div class="dialog-inner-box bg-black/50 flex items-center justify-center">
+                            <div class="text-center">
+                                <img class="w-6 mx-auto mb-2" src="./assets/images/slots/25.jpg" alt="">
+                                <h2 class="title">RTG</h2>
+                                <button class="button-main" onclick="OpenLoginDialog()">게임시작</button>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    <div class="dialog-game-box">
+                        <img src="./assets/images/slots/26.jpg" alt="">
+                        <div class="dialog-inner-box bg-black/50 flex items-center justify-center">
+                            <div class="text-center">
+                                <img class="w-6 mx-auto mb-2" src="./assets/images/slots/26.jpg" alt="">
+                                <h2 class="title">DREAMGAME</h2>
+                                <button class="button-main" onclick="OpenLoginDialog()">게임시작</button>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    <div class="dialog-game-box">
+                        <img src="./assets/images/slots/27.jpg" alt="">
+                        <div class="dialog-inner-box bg-black/50 flex items-center justify-center">
+                            <div class="text-center">
+                                <img class="w-6 mx-auto mb-2" src="./assets/images/slots/27.jpg" alt="">
+                                <h2 class="title">TTG</h2>
+                                <button class="button-main" onclick="OpenLoginDialog()">게임시작</button>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    <div class="dialog-game-box">
+                        <img src="./assets/images/slots/28.jpg" alt="">
+                        <div class="dialog-inner-box bg-black/50 flex items-center justify-center">
+                            <div class="text-center">
+                                <img class="w-6 mx-auto mb-2" src="./assets/images/slots/28.jpg" alt="">
+                                <h2 class="title">제네시스</h2>
+                                <button class="button-main" onclick="OpenLoginDialog()">게임시작</button>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    <div class="dialog-game-box">
+                        <img src="./assets/images/slots/29.jpg" alt="">
+                        <div class="dialog-inner-box bg-black/50 flex items-center justify-center">
+                            <div class="text-center">
+                                <img class="w-6 mx-auto mb-2" src="./assets/images/slots/29.jpg" alt="">
+                                <h2 class="title">비게이밍</h2>
+                                <button class="button-main" onclick="OpenLoginDialog()">게임시작</button>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    <div class="dialog-game-box">
+                        <img src="./assets/images/slots/30.jpg" alt="">
+                        <div class="dialog-inner-box bg-black/50 flex items-center justify-center">
+                            <div class="text-center">
+                                <img class="w-6 mx-auto mb-2" src="./assets/images/slots/30.jpg" alt="">
+                                <h2 class="title">BetSoft</h2>
+                                <button class="button-main" onclick="OpenLoginDialog()">게임시작</button>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    <div class="dialog-game-box">
+                        <img src="./assets/images/slots/31.jpg" alt="">
+                        <div class="dialog-inner-box bg-black/50 flex items-center justify-center">
+                            <div class="text-center">
+                                <img class="w-6 mx-auto mb-2" src="./assets/images/slots/31.jpg" alt="">
+                                <h2 class="title">드림테크</h2>
+                                <button class="button-main" onclick="OpenLoginDialog()">게임시작</button>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    <div class="dialog-game-box">
+                        <img src="./assets/images/slots/32.jpg" alt="">
+                        <div class="dialog-inner-box bg-black/50 flex items-center justify-center">
+                            <div class="text-center">
+                                <img class="w-6 mx-auto mb-2" src="./assets/images/slots/32.jpg" alt="">
+                                <h2 class="title">플레이앤고</h2>
+                                <button class="button-main" onclick="OpenLoginDialog()">게임시작</button>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    
+    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar bg-body-primary SIDEBAR_WRAPPER hidden">
+        <div class="flex items-center justify-between p-4 bg-body-secondary">
+            <div></div>
+            <div>
+                <img class="w-28" onclick="location.href='index.html'" src="./assets/images/logo/logo.png" alt="">
+            </div>
+            <div>
+                <img onclick="CloseSidebar()" class="w-8" src="./assets/images/icons/close.svg" alt="">
+            </div>
+        </div>
+        <div class="h-full grid grid-cols-6">
+            <div class="col-span-2 bg-body-tertiary">
+                <ul class="text-white font-bold text-sm">
+                    <li class="casino-lists-menu p-2 px-4 border-l-4  border-body-pink/10 text-body-pink"
+                        onclick="location.href='powerball.html'" onclick="location.href='powerball.html'">파워볼</li>
+                    <li class="slot-lists-menu p-2 px-4 border-l-4 border-body-primary" onclick="OpenCasinoGames()">카지노</li>
+                    <li class="p-2 px-4 border-l-4 border-body-primary" onclick="OpenSlotGames()">슬롯</li>
+                    <li class="p-2 px-4 border-l-4 border-body-primary">스포츠</li>
+                    <li class="p-2 px-4 border-l-4 border-body-primary" onclick="location.href='announcement.html'">공지사항
+                    </li>
+                    <li class="p-2 px-4 border-l-4 border-body-primary" onclick="location.href='betting-history.html'">베팅내역
+                    </li>
+                    <li class="p-2 px-4 border-l-4 border-body-primary" onclick="location.href='deposit.html'">입금신청</li>
+                    <li class="p-2 px-4 border-l-4 border-body-primary" onclick="location.href='withdrawal.html'">출금신청</li>
+                    <li class="p-2 px-4 border-l-4 border-body-primary" onclick="location.href='customer-service.html'">고객센터
+                    </li>
+                </ul>
+            </div>
+    
+            <div class="col-span-4 px-2">
+                <div class="casino-sidebar-content">
+                    <div class="flex justify-between items-center w-full border-b border-body-pink/10 py-2 px-2">
+                        <h2 class="text-body-pink font-bold">파워볼</h2>
+                        <img class="w-8" src="./assets/images/icons/down.svg" alt="">
+                    </div>
+                    <ul class="text-white text-sm font-semibold">
+                        <li class="p-2" onclick="GoToCasino()">EOS 파워볼 3분</li>
+                        <li class="p-2" onclick="GoToCasino()">EOS 파워볼 5분</li>
+                        <li class="p-2" onclick="GoToCasino()">PBG 파워볼</li>
+                        <li class="p-2" onclick="GoToCasino()">코인 파워볼</li>
+                        <li class="p-2" onclick="GoToCasino()">동행 파워볼</li>
+                        <li class="p-2" onclick="GoToCasino()">키노 사다리</li>
+                    </ul>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+    
+
+    <div class="fixed  top-0 w-full h-full bg-body-primary z-30 account-bar hidden" style="right: 0px;">
+        <!-- ACCOUNT BAR HEADER -->
+        <div
+            class="grid grid-cols-8 items-center justify-between w-full p-2 py-4 bg-body-secondary border-b border-body-pink">
+            <div class="col-span-7">
+                <div class="flex items-center gap-4 text-white">
+                    <label class="font-semibold text-sm flex items-center gap-1">
+                        <span class="text-body-pink ">LV.1</span>
+                        <span>홍길동</span>
+                        <span> 님,</span>
+                    </label>
+                    <label class="font-semibold text-sm flex items-center gap-1">
+                        <img class="w-4" src="./assets/images/icons/envelope.svg" alt="">
+                        <span>쪽지</span>
+                        <span class="text-body-pink ">0</span>
+                        <span>건</span>
+                    </label>
+                </div>
+            </div>
+            <div class="px-2 col-span-1 cursor-pointer" onclick="CloseAccountBar()">
+                <img class="w-8 " src="./assets/images/icons/close.svg" alt="">
+            </div>
+        </div>
+    
+        <!-- ACCOUNT BAR HEADER -->
+        <div class="grid grid-cols-8 items-center bg-body-secondary border-b border-body-pink/10 mb-4">
+            <div class="col-span-5 p-4  text-white">
+                <label class="text-sm font-semibold">보유머니</label>
+                <p class="text-body-pink font-semibold text-lg">100,000,000 원</p>
+            </div>
+            <div class="col-span-3 text-right px-4 py-2 pl-0 text-white text-xs font-semibold">
+                <div class="text-left  py-2 gap-1 border-b border-body-pink/20">
+                    <label class="">카지노머니 :</label>
+                    <div class="flex items-center justify-start gap-1">
+                        <p class="text-body-pink ">100,000,000 <span class="text-white">원</span></p>
+                        <img class="w-6" src="./assets/images/icons/exchange.svg" alt="">
+                    </div>
+    
+                </div>
+    
+                <div class="text-left  py-2 gap-1">
+                    <label class="">포인트 :</label>
+                    <div class="flex items-center justify-start gap-1">
+                        <p class="text-body-pink  ">100,000,000 <span class="text-white">P</span></p>
+                        <img class="w-6" src="./assets/images/icons/exchange.svg" alt="">
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-3 gap-2 text-white text-xs bg-body-secondary border-y border-body-pink/10 py-4 mb-4">
+            <div class="py-2 text-center" onclick="location.href='deposit.html'">
+                <img class="w-10 h-10 mb-2 mx-auto" src="./assets/images/icons/deposit.svg" alt="">
+                <p>충전신청</p>
+            </div>
+            <div class="py-2 text-center" onclick="location.href='withdrawal.html'">
+                <img class="w-10 h-10 mb-2 mx-auto" src="./assets/images/icons/withdraw.svg" alt="">
+                <p>환전신청</p>
+            </div>
+            <div class="py-2 text-center" onclick="location.href='point-history.html'">
+                <img class="w-8 h-10 mb-2 mx-auto" src="./assets/images/icons/convert.svg" alt="">
+                <p>포인트전환내역</p>
+            </div>
+            <div class="py-2 text-center">
+                <img class="w-10 h-10 mb-2 mx-auto" src="./assets/images/icons/account-inquiry.svg" alt="">
+                <p>빠른계좌문의</p>
+            </div>
+    
+            <div class="py-2 text-center" onclick="location.href='customer-service.html'">
+                <img class="w-10 h-10 mb-2 mx-auto" src="./assets/images/icons/customer-service.svg" alt="">
+                <p>고객센터</p>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 gap-4 text-white text-xs bg-body-secondary border-y border-body-pink/10 py-4 mb-4">
+    
+            <div class="px-2 text-center flex items-center gap-2" onclick="location.href='betting-history.html'">
+                <img class="w-6 h-6  " src="./assets/images/icons/betting-history.svg" alt="">
+                <p class="text-sm font-semibold">베팅내역</p>
+            </div>
+            <div class="px-2 text-center flex items-center gap-2" onclick="location.href='event.html'">
+                <img class="w-6 h-5  " src="./assets/images/icons/speaker.svg" alt="">
+                <p class="text-sm font-semibold">공지사항</p>
+            </div>
+        </div>
+        <div class="p-1">
+            <div class=" border border-body-pink/10 rounded" style="padding : 2px">
+                <div class="text-center">
+                    <button class="submit-deposit w-full">
+                        충전신청
+                    </button>
+                </div>
+    
+            </div>
+        </div>
+    
+    </div>
 
 
 
