@@ -127,6 +127,16 @@ const openEvent = (elem) => {
 	$(".event-board").show();
 };
 
+const OpenMiniGames = () => {
+	$("body").css("overflowY", "hidden");
+	$(".MINIGAME_GAME_WRAPPER").show();
+};
+
+const CloseMiniGames = () => {
+	$("body").css("overflowY", "scroll");
+	$(".MINIGAME_GAME_WRAPPER").hide();
+};
+
 $(document).ready(() => {
 	resizeIframe();
 });
